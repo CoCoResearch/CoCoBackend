@@ -1,0 +1,8 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(C:\Users\Lina8a\Documents\job\asistencia\code\coco-backend\conf\application.conf,C:\Users\Lina8a\Documents\job\asistencia\code\coco-backend\target\scala-2.11\classes\application.conf)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\Lina8a\Documents\job\asistencia\code\coco-backend\conf\evolutions,C:\Users\Lina8a\Documents\job\asistencia\code\coco-backend\target\scala-2.11\classes\evolutions)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\Lina8a\Documents\job\asistencia\code\coco-backend\conf\logback.xml,C:\Users\Lina8a\Documents\job\asistencia\code\coco-backend\target\scala-2.11\classes\logback.xml)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\Lina8a\Documents\job\asistencia\code\coco-backend\conf\routes,C:\Users\Lina8a\Documents\job\asistencia\code\coco-backend\target\scala-2.11\classes\routes)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\Lina8a\Documents\job\asistencia\code\coco-backend\conf\evolutions\default,C:\Users\Lina8a\Documents\job\asistencia\code\coco-backend\target\scala-2.11\classes\evolutions\default)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\Lina8a\Documents\job\asistencia\code\coco-backend\conf\evolutions\default\.Rhistory,C:\Users\Lina8a\Documents\job\asistencia\code\coco-backend\target\scala-2.11\classes\evolutions\default\.Rhistory)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\Lina8a\Documents\job\asistencia\code\coco-backend\conf\evolutions\default\1.sql,C:\Users\Lina8a\Documents\job\asistencia\code\coco-backend\target\scala-2.11\classes\evolutions\default\1.sql)[0m

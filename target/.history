@@ -1,0 +1,31 @@
+run
+sbt eclipse
+reload
+eclipse with-source=true
+compile
+run
+reload
+eclipse with-source=true
+run
+reload
+eclipse with-source=true
+reload
+eclipse with-source=true
+reload
+eclipse with-source=true
+run
+reload
+eclipse with-source=true
+run
+reload
+eclipse with-source=true
+run
+reload
+eclipse with-source=true
+run
+debug
+run
+reload 
+eclipse with-source=true
+compile
+run
