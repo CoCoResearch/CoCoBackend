@@ -9,9 +9,10 @@ GET     /                           controllers.HomeController.index
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
 
 # Feature model creation
-POST	/featureModels				controllers.FeatureModelController.create
+POST	/featureModels				controllers.FeatureModelController.createFeatureModel
 
 # Feature models procurement
-GET		/featureModels				controllers.FeatureModelController.get
+GET		/featureModels				controllers.FeatureModelController.getFeatureModels
 
-
+# Feature models procurement
+GET		/featureModels/:id			controllers.FeatureModelController.getFeatureModelById(id)

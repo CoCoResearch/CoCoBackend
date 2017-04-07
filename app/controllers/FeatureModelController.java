@@ -16,7 +16,13 @@ import util.Util;
 
 public class FeatureModelController extends Controller {
 
-	public Result create(){
+	/**
+	 * Create a new feature model in database and
+	 * upload the feature model file to AWS S3.
+	 * @return Result with the new created feature 
+	 * model as JSON.
+	 */
+	public Result createFeatureModel(){
 		try{
 			Form<FeatureModel> form = Form.form(FeatureModel.class).bindFromRequest();
 			MultipartFormData<File> body = request().body().asMultipartFormData();
@@ -48,9 +54,24 @@ public class FeatureModelController extends Controller {
 		}
 	}
 	
-	public Result get(){
+	/**
+	 * Get the list of feature models in data base.
+	 * @return Result with feature models as JSON.
+	 */
+	public Result getFeatureModels(){
 		List<FeatureModel> featureModels = FeatureModel.find.all();
 		JsonNode json = Json.toJson(featureModels);
+		return created(Util.createResponse(json, true));
+	}
+	
+	/**
+	 * Get a feature model given its ID.
+	 * @return Result with  the feature model as JSON.
+	 */
+	public Result getFeatureModelById(String id){
+		long integerId = Integer.parseInt(id);
+		FeatureModel featureModel = FeatureModel.find.byId(integerId);
+		JsonNode json = Json.toJson(featureModel);
 		return created(Util.createResponse(json, true));
 	}
 }

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/Lina8a/Documents/job/asistencia/code/coco-backend/conf/routes
-// @DATE:Fri Apr 07 10:22:59 COT 2017
+// @DATE:Fri Apr 07 12:00:44 COT 2017
 
 package router
 
@@ -49,8 +49,9 @@ class Routes(
   def documentation = List(
     ("""GET""", this.prefix, """controllers.HomeController.index"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
-    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """featureModels""", """controllers.FeatureModelController.create"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """featureModels""", """controllers.FeatureModelController.get"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """featureModels""", """controllers.FeatureModelController.createFeatureModel"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """featureModels""", """controllers.FeatureModelController.getFeatureModels"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """featureModels/""" + "$" + """id<[^/]+>""", """controllers.FeatureModelController.getFeatureModelById(id:String)"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -93,15 +94,15 @@ class Routes(
   )
 
   // @LINE:12
-  private[this] lazy val controllers_FeatureModelController_create2_route = Route("POST",
+  private[this] lazy val controllers_FeatureModelController_createFeatureModel2_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("featureModels")))
   )
-  private[this] lazy val controllers_FeatureModelController_create2_invoker = createInvoker(
-    FeatureModelController_2.create,
+  private[this] lazy val controllers_FeatureModelController_createFeatureModel2_invoker = createInvoker(
+    FeatureModelController_2.createFeatureModel,
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.FeatureModelController",
-      "create",
+      "createFeatureModel",
       Nil,
       "POST",
       """ Feature model creation""",
@@ -110,19 +111,36 @@ class Routes(
   )
 
   // @LINE:15
-  private[this] lazy val controllers_FeatureModelController_get3_route = Route("GET",
+  private[this] lazy val controllers_FeatureModelController_getFeatureModels3_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("featureModels")))
   )
-  private[this] lazy val controllers_FeatureModelController_get3_invoker = createInvoker(
-    FeatureModelController_2.get,
+  private[this] lazy val controllers_FeatureModelController_getFeatureModels3_invoker = createInvoker(
+    FeatureModelController_2.getFeatureModels,
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.FeatureModelController",
-      "get",
+      "getFeatureModels",
       Nil,
       "GET",
       """ Feature models procurement""",
       this.prefix + """featureModels"""
+    )
+  )
+
+  // @LINE:18
+  private[this] lazy val controllers_FeatureModelController_getFeatureModelById4_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("featureModels/"), DynamicPart("id", """[^/]+""",true)))
+  )
+  private[this] lazy val controllers_FeatureModelController_getFeatureModelById4_invoker = createInvoker(
+    FeatureModelController_2.getFeatureModelById(fakeValue[String]),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.FeatureModelController",
+      "getFeatureModelById",
+      Seq(classOf[String]),
+      "GET",
+      """ Feature models procurement""",
+      this.prefix + """featureModels/""" + "$" + """id<[^/]+>"""
     )
   )
 
@@ -142,15 +160,21 @@ class Routes(
       }
   
     // @LINE:12
-    case controllers_FeatureModelController_create2_route(params) =>
+    case controllers_FeatureModelController_createFeatureModel2_route(params) =>
       call { 
-        controllers_FeatureModelController_create2_invoker.call(FeatureModelController_2.create)
+        controllers_FeatureModelController_createFeatureModel2_invoker.call(FeatureModelController_2.createFeatureModel)
       }
   
     // @LINE:15
-    case controllers_FeatureModelController_get3_route(params) =>
+    case controllers_FeatureModelController_getFeatureModels3_route(params) =>
       call { 
-        controllers_FeatureModelController_get3_invoker.call(FeatureModelController_2.get)
+        controllers_FeatureModelController_getFeatureModels3_invoker.call(FeatureModelController_2.getFeatureModels)
+      }
+  
+    // @LINE:18
+    case controllers_FeatureModelController_getFeatureModelById4_route(params) =>
+      call(params.fromPath[String]("id", None)) { (id) =>
+        controllers_FeatureModelController_getFeatureModelById4_invoker.call(FeatureModelController_2.getFeatureModelById(id))
       }
   }
 }
