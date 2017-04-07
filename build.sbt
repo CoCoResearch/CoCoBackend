@@ -14,6 +14,7 @@ libraryDependencies ++= Seq(
   cache,
   javaWs,
   evolutions,
+  filters,
   "org.postgresql" % "postgresql" % "9.4-1201-jdbc4",
   "com.amazonaws" % "aws-java-sdk" % "1.3.11"
 )

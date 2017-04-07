@@ -4,6 +4,7 @@ import java.io.File;
 import com.fasterxml.jackson.databind.JsonNode;
 
 import models.FeatureModel;
+import play.api.Logger;
 import play.data.Form;
 import play.libs.Json;
 import play.mvc.*;
@@ -17,6 +18,7 @@ public class FeatureModelController extends Controller {
 	public Result create(){
 		try{
 			Form<FeatureModel> form = Form.form(FeatureModel.class).bindFromRequest();
+			System.out.println(form.data());
 			MultipartFormData<File> body = request().body().asMultipartFormData();
 			FilePart<File> filePart = body.getFile("file");
 			File file = filePart.getFile();
@@ -27,7 +29,9 @@ public class FeatureModelController extends Controller {
 			
 			FeatureModel featureModel = new FeatureModel();
 			featureModel.owner = form.get().owner;
+			featureModel.ownerEmail = form.get().ownerEmail;
 			featureModel.name = form.get().name;
+			featureModel.description = form.get().description;
 			featureModel.extension = form.get().extension;
 			featureModel.save();
 			

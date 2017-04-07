@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/Lina8a/Documents/job/asistencia/code/coco-backend/conf/routes
-// @DATE:Wed Jan 04 23:53:27 COT 2017
+// @DATE:Fri Apr 07 08:44:14 COT 2017
 
 package router
 

@@ -6,7 +6,9 @@
 create table feature_model (
   id                            bigserial not null,
   owner                         varchar(255) not null,
+  owner_email                   varchar(255) not null,
   name                          varchar(255) not null,
+  description                   varchar(255),
   extension                     varchar(255) not null,
   file                          varchar(255),
   constraint pk_feature_model primary key (id)

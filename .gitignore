@@ -5,3 +5,9 @@ bower_components/
 tmp
 .DS_Store
 .idea
+.classpath
+.project
+.settings/
+target/
+bin/
+project/

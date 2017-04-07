@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for coco-backend#coco-backend_2.11;1.0-SNAPSHOT [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.7 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.7 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@39ef2d10[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@5253e806[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.7[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.7 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[2.11.7] org.scala-lang#scala-library;2.11.7[0m
@@ -1422,21 +1422,8 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.5.6 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.play#play-jdbc-evolutions_2.11;2.5.6 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#play-jdbc-evolutions_2.11;2.5.6 {compile=[default(compile)]}[0m
-[0m[[0minfo[0m] [0mResolving com.typesafe.play#play-jdbc-evolutions_2.11;2.5.6 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: com.typesafe.play#play-jdbc-evolutions_2.11;2.5.6 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Lina8a\.ivy2\local\com.typesafe.play\play-jdbc-evolutions_2.11\2.5.6\ivys\ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for com.typesafe.play#play-jdbc-evolutions_2.11;2.5.6[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/typesafe/play/play-jdbc-evolutions_2.11/2.5.6/play-jdbc-evolutions_2.11-2.5.6.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for com.typesafe.play#play-jdbc-evolutions_2.11;2.5.6[0m
-[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/com/typesafe/play/play-jdbc-evolutions_2.11/2.5.6/play-jdbc-evolutions_2.11-2.5.6.pom (2.5.6)[0m
-[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/com/typesafe/play/play-jdbc-evolutions_2.11/2.5.6/play-jdbc-evolutions_2.11-2.5.6.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/typesafe/play/play-jdbc-evolutions_2.11/2.5.6/play-jdbc-evolutions_2.11-2.5.6.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/typesafe/play/play-jdbc-evolutions_2.11/2.5.6/play-jdbc-evolutions_2.11-2.5.6.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/typesafe/play/play-jdbc-evolutions_2.11/2.5.6/play-jdbc-evolutions_2.11-2.5.6.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.typesafe.play#play-jdbc-evolutions_2.11;2.5.6!play-jdbc-evolutions_2.11.pom(pom.original) (403ms)[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Lina8a\.ivy2\local\com.typesafe.play\play-jdbc-evolutions_2.11\2.5.6\jars\play-jdbc-evolutions_2.11.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/typesafe/play/play-jdbc-evolutions_2.11/2.5.6/play-jdbc-evolutions_2.11-2.5.6.jar[0m
-[0m[[0mdebug[0m] [0m	found com.typesafe.play#play-jdbc-evolutions_2.11;2.5.6 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.play#play-jdbc-evolutions_2.11;2.5.6[0m
+[0m[[0mdebug[0m] [0m	found com.typesafe.play#play-jdbc-evolutions_2.11;2.5.6 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.5.6 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.5.6 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc-evolutions_2.11;2.5.6->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
@@ -1452,6 +1439,26 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.5.6 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.5.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.5.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.11;2.5.6 [compile->default(compile)][0m
+[0m[[0minfo[0m] [0mResolving com.typesafe.play#filters-helpers_2.11;2.5.6 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#filters-helpers_2.11;2.5.6 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.play#filters-helpers_2.11;2.5.6[0m
+[0m[[0mdebug[0m] [0m	found com.typesafe.play#filters-helpers_2.11;2.5.6 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.11;2.5.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.11;2.5.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play_2.11;2.5.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play_2.11;2.5.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play-java_2.11;2.5.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play-java_2.11;2.5.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play_2.11;2.5.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play_2.11;2.5.6 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play-java_2.11;2.5.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play-java_2.11;2.5.6 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.11;2.5.6 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1201-jdbc4 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.postgresql#postgresql;9.4-1201-jdbc4 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.postgresql#postgresql;9.4-1201-jdbc4 {compile=[default(compile)]}[0m
@@ -1463,34 +1470,21 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.amazonaws#aws-java-sdk;1.3.11 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.amazonaws#aws-java-sdk;1.3.11 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.amazonaws#aws-java-sdk;1.3.11 {compile=[default(compile)]}[0m
-[0m[[0minfo[0m] [0mResolving com.amazonaws#aws-java-sdk;1.3.11 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: com.amazonaws#aws-java-sdk;1.3.11 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Lina8a\.ivy2\local\com.amazonaws\aws-java-sdk\1.3.11\ivys\ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for com.amazonaws#aws-java-sdk;1.3.11[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/amazonaws/aws-java-sdk/1.3.11/aws-java-sdk-1.3.11.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for com.amazonaws#aws-java-sdk;1.3.11[0m
-[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/com/amazonaws/aws-java-sdk/1.3.11/aws-java-sdk-1.3.11.pom (1.3.11)[0m
-[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/com/amazonaws/aws-java-sdk/1.3.11/aws-java-sdk-1.3.11.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/amazonaws/aws-java-sdk/1.3.11/aws-java-sdk-1.3.11.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/amazonaws/aws-java-sdk/1.3.11/aws-java-sdk-1.3.11.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/amazonaws/aws-java-sdk/1.3.11/aws-java-sdk-1.3.11.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.amazonaws#aws-java-sdk;1.3.11!aws-java-sdk.pom(pom.original) (355ms)[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Lina8a\.ivy2\local\com.amazonaws\aws-java-sdk\1.3.11\jars\aws-java-sdk.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/amazonaws/aws-java-sdk/1.3.11/aws-java-sdk-1.3.11.jar[0m
-[0m[[0mdebug[0m] [0m	found com.amazonaws#aws-java-sdk;1.3.11 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.amazonaws#aws-java-sdk;1.3.11[0m
+[0m[[0mdebug[0m] [0m	found com.amazonaws#aws-java-sdk;1.3.11 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.amazonaws#aws-java-sdk;1.3.11 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.amazonaws#aws-java-sdk;1.3.11 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.amazonaws#aws-java-sdk;1.3.11->commons-logging#commons-logging;[1.1, 1.2) [compile->master(compile)][0m
 [0m[[0minfo[0m] [0mResolving commons-logging#commons-logging;[1.1, 1.2) ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: commons-logging#commons-logging;[1.1, 1.2) {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdefault-cache: no cached resolved revision for commons-logging#commons-logging;[1.1, 1.2)[0m
+[0m[[0mdebug[0m] [0mdefault-cache: cached resolved revision expired for commons-logging#commons-logging;[1.1, 1.2)[0m
 [0m[[0minfo[0m] [0mResolving commons-logging#commons-logging;[1.1, 1.2) ...[0m
 [0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: commons-logging#commons-logging;[1.1, 1.2) {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdefault-cache: no cached resolved revision for commons-logging#commons-logging;[1.1, 1.2)[0m
-[0m[[0mdebug[0m] [0mdefault-cache: no cached resolved revision for commons-logging#commons-logging;[1.1, 1.2)[0m
+[0m[[0mdebug[0m] [0mdefault-cache: cached resolved revision expired for commons-logging#commons-logging;[1.1, 1.2)[0m
+[0m[[0mdebug[0m] [0mdefault-cache: cached resolved revision expired for commons-logging#commons-logging;[1.1, 1.2)[0m
 [0m[[0mdebug[0m] [0m		tried C:\Users\Lina8a\.ivy2\local\commons-logging\commons-logging\[revision]\ivys\ivy.xml[0m
 [0m[[0mdebug[0m] [0m	local: no ivy file found for commons-logging#commons-logging;[1.1, 1.2)[0m
-[0m[[0mdebug[0m] [0mdefault-cache: no cached resolved revision for commons-logging#commons-logging;[1.1, 1.2)[0m
+[0m[[0mdebug[0m] [0mdefault-cache: cached resolved revision expired for commons-logging#commons-logging;[1.1, 1.2)[0m
 [0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/commons-logging/commons-logging/[revision]/commons-logging-[revision].pom[0m
 [0m[[0mdebug[0m] [0m	listing revisions from maven-metadata: https://repo1.maven.org/maven2/commons-logging/commons-logging/maven-metadata.xml[0m
 [0m[[0mdebug[0m] [0m	public: found md file for commons-logging#commons-logging;[1.1, 1.2)[0m
@@ -1504,99 +1498,27 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.amazonaws#aws-java-sdk;1.3.11->org.apache.httpcomponents#httpclient;[4.1, 4.2) [compile->master(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.apache.httpcomponents#httpclient;[4.1, 4.2) ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.apache.httpcomponents#httpclient;[4.1, 4.2) {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdefault-cache: no cached resolved revision for org.apache.httpcomponents#httpclient;[4.1, 4.2)[0m
+[0m[[0mdebug[0m] [0mdefault-cache: cached resolved revision expired for org.apache.httpcomponents#httpclient;[4.1, 4.2)[0m
 [0m[[0minfo[0m] [0mResolving org.apache.httpcomponents#httpclient;[4.1, 4.2) ...[0m
 [0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.apache.httpcomponents#httpclient;[4.1, 4.2) {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdefault-cache: no cached resolved revision for org.apache.httpcomponents#httpclient;[4.1, 4.2)[0m
-[0m[[0mdebug[0m] [0mdefault-cache: no cached resolved revision for org.apache.httpcomponents#httpclient;[4.1, 4.2)[0m
+[0m[[0mdebug[0m] [0mdefault-cache: cached resolved revision expired for org.apache.httpcomponents#httpclient;[4.1, 4.2)[0m
+[0m[[0mdebug[0m] [0mdefault-cache: cached resolved revision expired for org.apache.httpcomponents#httpclient;[4.1, 4.2)[0m
 [0m[[0mdebug[0m] [0m		tried C:\Users\Lina8a\.ivy2\local\org.apache.httpcomponents\httpclient\[revision]\ivys\ivy.xml[0m
 [0m[[0mdebug[0m] [0m	local: no ivy file found for org.apache.httpcomponents#httpclient;[4.1, 4.2)[0m
-[0m[[0mdebug[0m] [0mdefault-cache: no cached resolved revision for org.apache.httpcomponents#httpclient;[4.1, 4.2)[0m
+[0m[[0mdebug[0m] [0mdefault-cache: cached resolved revision expired for org.apache.httpcomponents#httpclient;[4.1, 4.2)[0m
 [0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/apache/httpcomponents/httpclient/[revision]/httpclient-[revision].pom[0m
 [0m[[0mdebug[0m] [0m	listing revisions from maven-metadata: https://repo1.maven.org/maven2/org/apache/httpcomponents/httpclient/maven-metadata.xml[0m
 [0m[[0mdebug[0m] [0m	public: found md file for org.apache.httpcomponents#httpclient;[4.1, 4.2)[0m
 [0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/apache/httpcomponents/httpclient/4.2-beta1/httpclient-4.2-beta1.pom (4.2-beta1)[0m
-[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/apache/httpcomponents/httpclient/4.2-beta1/httpclient-4.2-beta1.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/apache/httpcomponents/httpclient/4.2-beta1/httpclient-4.2-beta1.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/apache/httpcomponents/httpclient/4.2-beta1/httpclient-4.2-beta1.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/apache/httpcomponents/httpclient/4.2-beta1/httpclient-4.2-beta1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.apache.httpcomponents#httpclient;4.2-beta1!httpclient.pom(pom.original) (378ms)[0m
-[0m[[0minfo[0m] [0mResolving org.apache.httpcomponents#httpcomponents-client;4.2-beta1 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.apache.httpcomponents#httpcomponents-client;4.2-beta1 {}[0m
-[0m[[0minfo[0m] [0mResolving org.apache.httpcomponents#httpcomponents-client;4.2-beta1 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.apache.httpcomponents#httpcomponents-client;4.2-beta1 {}[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Lina8a\.ivy2\local\org.apache.httpcomponents\httpcomponents-client\4.2-beta1\ivys\ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.apache.httpcomponents#httpcomponents-client;4.2-beta1[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcomponents-client/4.2-beta1/httpcomponents-client-4.2-beta1.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.apache.httpcomponents#httpcomponents-client;4.2-beta1[0m
-[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcomponents-client/4.2-beta1/httpcomponents-client-4.2-beta1.pom (4.2-beta1)[0m
-[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcomponents-client/4.2-beta1/httpcomponents-client-4.2-beta1.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcomponents-client/4.2-beta1/httpcomponents-client-4.2-beta1.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcomponents-client/4.2-beta1/httpcomponents-client-4.2-beta1.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcomponents-client/4.2-beta1/httpcomponents-client-4.2-beta1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.apache.httpcomponents#httpcomponents-client;4.2-beta1!httpcomponents-client.pom(pom.original) (471ms)[0m
-[0m[[0minfo[0m] [0mResolving org.apache.httpcomponents#project;5 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.apache.httpcomponents#project;5 {}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.apache.httpcomponents#project;5[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Lina8a\.ivy2\local\org.apache.httpcomponents\httpcomponents-client\4.2-beta1\jars\httpcomponents-client.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcomponents-client/4.2-beta1/httpcomponents-client-4.2-beta1.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcomponents-client/4.2-beta1/httpcomponents-client-4.2-beta1.jar[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Lina8a\Development\typesafe-activator-1.3.10\activator-dist-1.3.10\repository\org.apache.httpcomponents\httpcomponents-client\4.2-beta1\jars\httpcomponents-client.jar[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Lina8a\Development\typesafe-activator-1.3.10\activator-dist-1.3.10\repository\org.apache.httpcomponents\httpcomponents-client\4.2-beta1\jars\httpcomponents-client.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/releases/org/apache/httpcomponents/httpcomponents-client/4.2-beta1/httpcomponents-client-4.2-beta1.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/releases/org/apache/httpcomponents/httpcomponents-client/4.2-beta1/httpcomponents-client-4.2-beta1.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.apache.httpcomponents/httpcomponents-client/4.2-beta1/jars/httpcomponents-client.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/ivy-releases/org.apache.httpcomponents/httpcomponents-client/4.2-beta1/jars/httpcomponents-client.jar[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Lina8a\.ivy2\local\org.apache.httpcomponents\httpclient\4.2-beta1\jars\httpclient.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/apache/httpcomponents/httpclient/4.2-beta1/httpclient-4.2-beta1.jar[0m
-[0m[[0mdebug[0m] [0m		[4.2-beta1] org.apache.httpcomponents#httpclient[0m
-[0m[[0mdebug[0m] [0m	found org.apache.httpcomponents#httpclient;4.2-beta1 in public[0m
+[0m[[0mdebug[0m] [0m	default-cache: revision in cache: org.apache.httpcomponents#httpclient;4.2-beta1[0m
+[0m[[0mdebug[0m] [0m	found org.apache.httpcomponents#httpclient;4.2-beta1 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[4.2-beta1] org.apache.httpcomponents#httpclient;[4.1, 4.2)[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.amazonaws#aws-java-sdk;1.3.11->org.apache.httpcomponents#httpclient;[4.1, 4.2) [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.httpcomponents#httpclient;[4.1, 4.2)->org.apache.httpcomponents#httpcore;4.2-beta1 [compile->master(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.apache.httpcomponents#httpcore;4.2-beta1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.apache.httpcomponents#httpcore;4.2-beta1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0minfo[0m] [0mResolving org.apache.httpcomponents#httpcore;4.2-beta1 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.apache.httpcomponents#httpcore;4.2-beta1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Lina8a\.ivy2\local\org.apache.httpcomponents\httpcore\4.2-beta1\ivys\ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.apache.httpcomponents#httpcore;4.2-beta1[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcore/4.2-beta1/httpcore-4.2-beta1.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.apache.httpcomponents#httpcore;4.2-beta1[0m
-[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcore/4.2-beta1/httpcore-4.2-beta1.pom (4.2-beta1)[0m
-[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcore/4.2-beta1/httpcore-4.2-beta1.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcore/4.2-beta1/httpcore-4.2-beta1.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcore/4.2-beta1/httpcore-4.2-beta1.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcore/4.2-beta1/httpcore-4.2-beta1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.apache.httpcomponents#httpcore;4.2-beta1!httpcore.pom(pom.original) (368ms)[0m
-[0m[[0minfo[0m] [0mResolving org.apache.httpcomponents#httpcomponents-core;4.2-beta1 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.apache.httpcomponents#httpcomponents-core;4.2-beta1 {}[0m
-[0m[[0minfo[0m] [0mResolving org.apache.httpcomponents#httpcomponents-core;4.2-beta1 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.apache.httpcomponents#httpcomponents-core;4.2-beta1 {}[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Lina8a\.ivy2\local\org.apache.httpcomponents\httpcomponents-core\4.2-beta1\ivys\ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.apache.httpcomponents#httpcomponents-core;4.2-beta1[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcomponents-core/4.2-beta1/httpcomponents-core-4.2-beta1.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.apache.httpcomponents#httpcomponents-core;4.2-beta1[0m
-[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcomponents-core/4.2-beta1/httpcomponents-core-4.2-beta1.pom (4.2-beta1)[0m
-[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcomponents-core/4.2-beta1/httpcomponents-core-4.2-beta1.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcomponents-core/4.2-beta1/httpcomponents-core-4.2-beta1.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcomponents-core/4.2-beta1/httpcomponents-core-4.2-beta1.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcomponents-core/4.2-beta1/httpcomponents-core-4.2-beta1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.apache.httpcomponents#httpcomponents-core;4.2-beta1!httpcomponents-core.pom(pom.original) (378ms)[0m
-[0m[[0minfo[0m] [0mResolving org.apache.httpcomponents#project;5 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.apache.httpcomponents#project;5 {}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.apache.httpcomponents#project;5[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Lina8a\.ivy2\local\org.apache.httpcomponents\httpcomponents-core\4.2-beta1\jars\httpcomponents-core.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcomponents-core/4.2-beta1/httpcomponents-core-4.2-beta1.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcomponents-core/4.2-beta1/httpcomponents-core-4.2-beta1.jar[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Lina8a\Development\typesafe-activator-1.3.10\activator-dist-1.3.10\repository\org.apache.httpcomponents\httpcomponents-core\4.2-beta1\jars\httpcomponents-core.jar[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Lina8a\Development\typesafe-activator-1.3.10\activator-dist-1.3.10\repository\org.apache.httpcomponents\httpcomponents-core\4.2-beta1\jars\httpcomponents-core.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/releases/org/apache/httpcomponents/httpcomponents-core/4.2-beta1/httpcomponents-core-4.2-beta1.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/releases/org/apache/httpcomponents/httpcomponents-core/4.2-beta1/httpcomponents-core-4.2-beta1.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.apache.httpcomponents/httpcomponents-core/4.2-beta1/jars/httpcomponents-core.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/ivy-releases/org.apache.httpcomponents/httpcomponents-core/4.2-beta1/jars/httpcomponents-core.jar[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Lina8a\.ivy2\local\org.apache.httpcomponents\httpcore\4.2-beta1\jars\httpcore.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcore/4.2-beta1/httpcore-4.2-beta1.jar[0m
-[0m[[0mdebug[0m] [0m	found org.apache.httpcomponents#httpcore;4.2-beta1 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.apache.httpcomponents#httpcore;4.2-beta1[0m
+[0m[[0mdebug[0m] [0m	found org.apache.httpcomponents#httpcore;4.2-beta1 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.httpcomponents#httpclient;[4.1, 4.2)->org.apache.httpcomponents#httpcore;4.2-beta1 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.httpcomponents#httpclient;[4.1, 4.2)->org.apache.httpcomponents#httpcore;4.2-beta1 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.httpcomponents#httpclient;[4.1, 4.2)->org.apache.httpcomponents#httpcore;4.2-beta1 [compile->runtime(*)][0m
@@ -1626,27 +1548,20 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.amazonaws#aws-java-sdk;1.3.11->org.codehaus.jackson#jackson-core-asl;[1.8,1.9) [compile->master(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.codehaus.jackson#jackson-core-asl;[1.8,1.9) ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.codehaus.jackson#jackson-core-asl;[1.8,1.9) {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdefault-cache: no cached resolved revision for org.codehaus.jackson#jackson-core-asl;[1.8,1.9)[0m
+[0m[[0mdebug[0m] [0mdefault-cache: cached resolved revision expired for org.codehaus.jackson#jackson-core-asl;[1.8,1.9)[0m
 [0m[[0minfo[0m] [0mResolving org.codehaus.jackson#jackson-core-asl;[1.8,1.9) ...[0m
 [0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.codehaus.jackson#jackson-core-asl;[1.8,1.9) {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdefault-cache: no cached resolved revision for org.codehaus.jackson#jackson-core-asl;[1.8,1.9)[0m
-[0m[[0mdebug[0m] [0mdefault-cache: no cached resolved revision for org.codehaus.jackson#jackson-core-asl;[1.8,1.9)[0m
+[0m[[0mdebug[0m] [0mdefault-cache: cached resolved revision expired for org.codehaus.jackson#jackson-core-asl;[1.8,1.9)[0m
+[0m[[0mdebug[0m] [0mdefault-cache: cached resolved revision expired for org.codehaus.jackson#jackson-core-asl;[1.8,1.9)[0m
 [0m[[0mdebug[0m] [0m		tried C:\Users\Lina8a\.ivy2\local\org.codehaus.jackson\jackson-core-asl\[revision]\ivys\ivy.xml[0m
 [0m[[0mdebug[0m] [0m	local: no ivy file found for org.codehaus.jackson#jackson-core-asl;[1.8,1.9)[0m
-[0m[[0mdebug[0m] [0mdefault-cache: no cached resolved revision for org.codehaus.jackson#jackson-core-asl;[1.8,1.9)[0m
+[0m[[0mdebug[0m] [0mdefault-cache: cached resolved revision expired for org.codehaus.jackson#jackson-core-asl;[1.8,1.9)[0m
 [0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-core-asl/[revision]/jackson-core-asl-[revision].pom[0m
 [0m[[0mdebug[0m] [0m	listing revisions from maven-metadata: https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-core-asl/maven-metadata.xml[0m
 [0m[[0mdebug[0m] [0m	public: found md file for org.codehaus.jackson#jackson-core-asl;[1.8,1.9)[0m
 [0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-core-asl/1.8.11/jackson-core-asl-1.8.11.pom (1.8.11)[0m
-[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-core-asl/1.8.11/jackson-core-asl-1.8.11.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-core-asl/1.8.11/jackson-core-asl-1.8.11.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-core-asl/1.8.11/jackson-core-asl-1.8.11.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-core-asl/1.8.11/jackson-core-asl-1.8.11.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.codehaus.jackson#jackson-core-asl;1.8.11!jackson-core-asl.pom(pom.original) (360ms)[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Lina8a\.ivy2\local\org.codehaus.jackson\jackson-core-asl\1.8.11\jars\jackson-core-asl.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-core-asl/1.8.11/jackson-core-asl-1.8.11.jar[0m
-[0m[[0mdebug[0m] [0m		[1.8.11] org.codehaus.jackson#jackson-core-asl[0m
-[0m[[0mdebug[0m] [0m	found org.codehaus.jackson#jackson-core-asl;1.8.11 in public[0m
+[0m[[0mdebug[0m] [0m	default-cache: revision in cache: org.codehaus.jackson#jackson-core-asl;1.8.11[0m
+[0m[[0mdebug[0m] [0m	found org.codehaus.jackson#jackson-core-asl;1.8.11 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[1.8.11] org.codehaus.jackson#jackson-core-asl;[1.8,1.9)[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.amazonaws#aws-java-sdk;1.3.11->org.codehaus.jackson#jackson-core-asl;[1.8,1.9) [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.amazonaws#aws-java-sdk;1.3.11->org.codehaus.jackson#jackson-core-asl;[1.8,1.9) [compile->runtime(*)][0m
@@ -1654,27 +1569,20 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.amazonaws#aws-java-sdk;1.3.11->org.codehaus.jackson#jackson-mapper-asl;[1.8,1.9) [compile->master(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.codehaus.jackson#jackson-mapper-asl;[1.8,1.9) ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.codehaus.jackson#jackson-mapper-asl;[1.8,1.9) {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdefault-cache: no cached resolved revision for org.codehaus.jackson#jackson-mapper-asl;[1.8,1.9)[0m
+[0m[[0mdebug[0m] [0mdefault-cache: cached resolved revision expired for org.codehaus.jackson#jackson-mapper-asl;[1.8,1.9)[0m
 [0m[[0minfo[0m] [0mResolving org.codehaus.jackson#jackson-mapper-asl;[1.8,1.9) ...[0m
 [0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.codehaus.jackson#jackson-mapper-asl;[1.8,1.9) {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdefault-cache: no cached resolved revision for org.codehaus.jackson#jackson-mapper-asl;[1.8,1.9)[0m
-[0m[[0mdebug[0m] [0mdefault-cache: no cached resolved revision for org.codehaus.jackson#jackson-mapper-asl;[1.8,1.9)[0m
+[0m[[0mdebug[0m] [0mdefault-cache: cached resolved revision expired for org.codehaus.jackson#jackson-mapper-asl;[1.8,1.9)[0m
+[0m[[0mdebug[0m] [0mdefault-cache: cached resolved revision expired for org.codehaus.jackson#jackson-mapper-asl;[1.8,1.9)[0m
 [0m[[0mdebug[0m] [0m		tried C:\Users\Lina8a\.ivy2\local\org.codehaus.jackson\jackson-mapper-asl\[revision]\ivys\ivy.xml[0m
 [0m[[0mdebug[0m] [0m	local: no ivy file found for org.codehaus.jackson#jackson-mapper-asl;[1.8,1.9)[0m
-[0m[[0mdebug[0m] [0mdefault-cache: no cached resolved revision for org.codehaus.jackson#jackson-mapper-asl;[1.8,1.9)[0m
+[0m[[0mdebug[0m] [0mdefault-cache: cached resolved revision expired for org.codehaus.jackson#jackson-mapper-asl;[1.8,1.9)[0m
 [0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-mapper-asl/[revision]/jackson-mapper-asl-[revision].pom[0m
 [0m[[0mdebug[0m] [0m	listing revisions from maven-metadata: https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-mapper-asl/maven-metadata.xml[0m
 [0m[[0mdebug[0m] [0m	public: found md file for org.codehaus.jackson#jackson-mapper-asl;[1.8,1.9)[0m
 [0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-mapper-asl/1.8.11/jackson-mapper-asl-1.8.11.pom (1.8.11)[0m
-[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-mapper-asl/1.8.11/jackson-mapper-asl-1.8.11.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-mapper-asl/1.8.11/jackson-mapper-asl-1.8.11.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-mapper-asl/1.8.11/jackson-mapper-asl-1.8.11.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-mapper-asl/1.8.11/jackson-mapper-asl-1.8.11.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.codehaus.jackson#jackson-mapper-asl;1.8.11!jackson-mapper-asl.pom(pom.original) (415ms)[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Lina8a\.ivy2\local\org.codehaus.jackson\jackson-mapper-asl\1.8.11\jars\jackson-mapper-asl.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-mapper-asl/1.8.11/jackson-mapper-asl-1.8.11.jar[0m
-[0m[[0mdebug[0m] [0m		[1.8.11] org.codehaus.jackson#jackson-mapper-asl[0m
-[0m[[0mdebug[0m] [0m	found org.codehaus.jackson#jackson-mapper-asl;1.8.11 in public[0m
+[0m[[0mdebug[0m] [0m	default-cache: revision in cache: org.codehaus.jackson#jackson-mapper-asl;1.8.11[0m
+[0m[[0mdebug[0m] [0m	found org.codehaus.jackson#jackson-mapper-asl;1.8.11 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[1.8.11] org.codehaus.jackson#jackson-mapper-asl;[1.8,1.9)[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.amazonaws#aws-java-sdk;1.3.11->org.codehaus.jackson#jackson-mapper-asl;[1.8,1.9) [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.codehaus.jackson#jackson-mapper-asl;[1.8,1.9)->org.codehaus.jackson#jackson-core-asl;[1.8,1.9) [compile->master(compile)][0m
@@ -2660,6 +2568,22 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.5.6 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.5.6 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.5.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.11;2.5.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.11;2.5.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.11;2.5.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play_2.11;2.5.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play_2.11;2.5.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play-java_2.11;2.5.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play-java_2.11;2.5.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play_2.11;2.5.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play_2.11;2.5.6 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play-java_2.11;2.5.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play-java_2.11;2.5.6 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.11;2.5.6 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1201-jdbc4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1201-jdbc4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1201-jdbc4 [compile->compile][0m
@@ -3678,6 +3602,22 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.5.6 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.5.6 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.5.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.11;2.5.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.11;2.5.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.11;2.5.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play_2.11;2.5.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play_2.11;2.5.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play-java_2.11;2.5.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play-java_2.11;2.5.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play_2.11;2.5.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play_2.11;2.5.6 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play-java_2.11;2.5.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play-java_2.11;2.5.6 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.11;2.5.6 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1201-jdbc4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1201-jdbc4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1201-jdbc4 [compile->compile][0m
@@ -5222,6 +5162,22 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.5.6 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.5.6 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.5.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.11;2.5.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.11;2.5.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.11;2.5.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play_2.11;2.5.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play_2.11;2.5.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play-java_2.11;2.5.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play-java_2.11;2.5.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play_2.11;2.5.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play_2.11;2.5.6 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play-java_2.11;2.5.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play-java_2.11;2.5.6 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.11;2.5.6 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1201-jdbc4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1201-jdbc4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1201-jdbc4 [compile->compile][0m
@@ -6242,6 +6198,22 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.5.6 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.5.6 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.5.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.11;2.5.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.11;2.5.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.11;2.5.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play_2.11;2.5.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play_2.11;2.5.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play-java_2.11;2.5.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play-java_2.11;2.5.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play_2.11;2.5.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play_2.11;2.5.6 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play-java_2.11;2.5.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play-java_2.11;2.5.6 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.11;2.5.6 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1201-jdbc4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1201-jdbc4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1201-jdbc4 [compile->compile][0m
@@ -7262,6 +7234,22 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.5.6 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.5.6 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#play-jdbc-evolutions_2.11;2.5.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.11;2.5.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.11;2.5.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.11;2.5.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play_2.11;2.5.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play_2.11;2.5.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play-java_2.11;2.5.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play-java_2.11;2.5.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play_2.11;2.5.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play_2.11;2.5.6 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play-java_2.11;2.5.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.11;2.5.6->com.typesafe.play#play-java_2.11;2.5.6 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.11;2.5.6 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1201-jdbc4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1201-jdbc4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies coco-backend#coco-backend_2.11;1.0-SNAPSHOT->org.postgresql#postgresql;9.4-1201-jdbc4 [compile->compile][0m
@@ -8355,19 +8343,10 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-java-jdbc_2.11;2.5.6!play-java-jdbc_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-cache_2.11;2.5.6!play-cache_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-java-ws_2.11;2.5.6!play-java-ws_2.11.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/typesafe/play/play-jdbc-evolutions_2.11/2.5.6/play-jdbc-evolutions_2.11-2.5.6.jar[0m
-[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/com/typesafe/play/play-jdbc-evolutions_2.11/2.5.6/play-jdbc-evolutions_2.11-2.5.6.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/typesafe/play/play-jdbc-evolutions_2.11/2.5.6/play-jdbc-evolutions_2.11-2.5.6.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/typesafe/play/play-jdbc-evolutions_2.11/2.5.6/play-jdbc-evolutions_2.11-2.5.6.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/typesafe/play/play-jdbc-evolutions_2.11/2.5.6/play-jdbc-evolutions_2.11-2.5.6.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.typesafe.play#play-jdbc-evolutions_2.11;2.5.6!play-jdbc-evolutions_2.11.jar (685ms)[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-jdbc-evolutions_2.11;2.5.6!play-jdbc-evolutions_2.11.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#filters-helpers_2.11;2.5.6!filters-helpers_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.postgresql#postgresql;9.4-1201-jdbc4!postgresql.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/amazonaws/aws-java-sdk/1.3.11/aws-java-sdk-1.3.11.jar[0m
-[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/com/amazonaws/aws-java-sdk/1.3.11/aws-java-sdk-1.3.11.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/amazonaws/aws-java-sdk/1.3.11/aws-java-sdk-1.3.11.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/amazonaws/aws-java-sdk/1.3.11/aws-java-sdk-1.3.11.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/amazonaws/aws-java-sdk/1.3.11/aws-java-sdk-1.3.11.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.amazonaws#aws-java-sdk;1.3.11!aws-java-sdk.jar (13890ms)[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.amazonaws#aws-java-sdk;1.3.11!aws-java-sdk.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.commons#commons-lang3;3.4!commons-lang3.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.1!scala-xml_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.avaje.ebeanorm#avaje-ebeanorm;6.18.1!avaje-ebeanorm.jar[0m
@@ -8456,30 +8435,10 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.asynchttpclient#netty-resolver;2.0.11!netty-resolver.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.asynchttpclient#netty-codec-dns;2.0.11!netty-codec-dns.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] commons-logging#commons-logging;1.1.3!commons-logging.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/apache/httpcomponents/httpclient/4.2-beta1/httpclient-4.2-beta1.jar[0m
-[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/apache/httpcomponents/httpclient/4.2-beta1/httpclient-4.2-beta1.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/apache/httpcomponents/httpclient/4.2-beta1/httpclient-4.2-beta1.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/apache/httpcomponents/httpclient/4.2-beta1/httpclient-4.2-beta1.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/apache/httpcomponents/httpclient/4.2-beta1/httpclient-4.2-beta1.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.apache.httpcomponents#httpclient;4.2-beta1!httpclient.jar (1039ms)[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-core-asl/1.8.11/jackson-core-asl-1.8.11.jar[0m
-[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-core-asl/1.8.11/jackson-core-asl-1.8.11.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-core-asl/1.8.11/jackson-core-asl-1.8.11.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-core-asl/1.8.11/jackson-core-asl-1.8.11.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-core-asl/1.8.11/jackson-core-asl-1.8.11.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.codehaus.jackson#jackson-core-asl;1.8.11!jackson-core-asl.jar (850ms)[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-mapper-asl/1.8.11/jackson-mapper-asl-1.8.11.jar[0m
-[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-mapper-asl/1.8.11/jackson-mapper-asl-1.8.11.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-mapper-asl/1.8.11/jackson-mapper-asl-1.8.11.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-mapper-asl/1.8.11/jackson-mapper-asl-1.8.11.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-mapper-asl/1.8.11/jackson-mapper-asl-1.8.11.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.codehaus.jackson#jackson-mapper-asl;1.8.11!jackson-mapper-asl.jar (3136ms)[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcore/4.2-beta1/httpcore-4.2-beta1.jar[0m
-[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcore/4.2-beta1/httpcore-4.2-beta1.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcore/4.2-beta1/httpcore-4.2-beta1.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcore/4.2-beta1/httpcore-4.2-beta1.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcore/4.2-beta1/httpcore-4.2-beta1.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.apache.httpcomponents#httpcore;4.2-beta1!httpcore.jar (710ms)[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.httpcomponents#httpclient;4.2-beta1!httpclient.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.codehaus.jackson#jackson-core-asl;1.8.11!jackson-core-asl.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.codehaus.jackson#jackson-mapper-asl;1.8.11!jackson-mapper-asl.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.httpcomponents#httpcore;4.2-beta1!httpcore.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-test_2.11;2.5.6!play-test_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] junit#junit;4.12!junit.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.novocode#junit-interface;0.11!junit-interface.jar[0m
@@ -8534,7 +8493,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.11.7!scala-compiler.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.4!scala-xml_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.12.1!jline.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 30315ms :: artifacts dl 20546ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 25243ms :: artifacts dl 375ms[0m
 [0m[[0mdebug[0m] [0m	report for coco-backend#coco-backend_2.11;1.0-SNAPSHOT compile produced in C:\Users\Lina8a\Documents\job\asistencia\code\coco-backend\target\resolution-cache\reports\coco-backend-coco-backend_2.11-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for coco-backend#coco-backend_2.11;1.0-SNAPSHOT runtime produced in C:\Users\Lina8a\Documents\job\asistencia\code\coco-backend\target\resolution-cache\reports\coco-backend-coco-backend_2.11-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for coco-backend#coco-backend_2.11;1.0-SNAPSHOT test produced in C:\Users\Lina8a\Documents\job\asistencia\code\coco-backend\target\resolution-cache\reports\coco-backend-coco-backend_2.11-test.xml[0m
@@ -8548,5 +8507,5 @@
 [0m[[0mdebug[0m] [0m	report for coco-backend#coco-backend_2.11;1.0-SNAPSHOT docs produced in C:\Users\Lina8a\Documents\job\asistencia\code\coco-backend\target\resolution-cache\reports\coco-backend-coco-backend_2.11-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for coco-backend#coco-backend_2.11;1.0-SNAPSHOT pom produced in C:\Users\Lina8a\Documents\job\asistencia\code\coco-backend\target\resolution-cache\reports\coco-backend-coco-backend_2.11-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for coco-backend#coco-backend_2.11;1.0-SNAPSHOT scala-tool produced in C:\Users\Lina8a\Documents\job\asistencia\code\coco-backend\target\resolution-cache\reports\coco-backend-coco-backend_2.11-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (30315ms resolve - 20546ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (25243ms resolve - 375ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

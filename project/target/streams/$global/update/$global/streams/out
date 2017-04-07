@@ -2437,51 +2437,13 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies default#coco-backend-build;0.1-SNAPSHOT->com.typesafe.sbt#sbt-play-ebean;3.0.0 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.sbt#sbt-play-ebean;3.0.0 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.sbt#sbt-play-ebean;3.0.0 {compile=[default(compile)]}[0m
-[0m[[0minfo[0m] [0mResolving com.typesafe.sbt#sbt-play-ebean;3.0.0 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: com.typesafe.sbt#sbt-play-ebean;3.0.0 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.sbt/sbt-play-ebean/scala_2.10/sbt_0.13/3.0.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.sbt/sbt-play-ebean/scala_2.10/sbt_0.13/3.0.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: no ivy file found for com.typesafe.sbt#sbt-play-ebean;3.0.0[0m
-[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-play-ebean/scala_2.10/sbt_0.13/3.0.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	sbt-plugin-releases: found md file for com.typesafe.sbt#sbt-play-ebean;3.0.0[0m
-[0m[[0mdebug[0m] [0m		=> https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-play-ebean/scala_2.10/sbt_0.13/3.0.0/ivys/ivy.xml (3.0.0)[0m
-[0m[[0mdebug[0m] [0mdownloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-play-ebean/scala_2.10/sbt_0.13/3.0.0/ivys/ivy.xml ...[0m
-[0m[[0mdebug[0m] [0m	sbt-plugin-releases: downloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-play-ebean/scala_2.10/sbt_0.13/3.0.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	sbt-plugin-releases: downloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-play-ebean/scala_2.10/sbt_0.13/3.0.0/ivys/ivy.xml.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-play-ebean/scala_2.10/sbt_0.13/3.0.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.typesafe.sbt#sbt-play-ebean;3.0.0!ivy.xml(ivy.original) (2147ms)[0m
-[0m[[0mdebug[0m] [0m	found com.typesafe.sbt#sbt-play-ebean;3.0.0 in sbt-plugin-releases[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.sbt#sbt-play-ebean;3.0.0[0m
+[0m[[0mdebug[0m] [0m	found com.typesafe.sbt#sbt-play-ebean;3.0.0 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbt#sbt-play-ebean;3.0.0->org.avaje.ebeanorm#avaje-ebeanorm-agent;4.9.1 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.avaje.ebeanorm#avaje-ebeanorm-agent;4.9.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.avaje.ebeanorm#avaje-ebeanorm-agent;4.9.1 {compile=[default(compile)]}[0m
-[0m[[0minfo[0m] [0mResolving org.avaje.ebeanorm#avaje-ebeanorm-agent;4.9.1 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.avaje.ebeanorm#avaje-ebeanorm-agent;4.9.1 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.avaje.ebeanorm/avaje-ebeanorm-agent/4.9.1/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.avaje.ebeanorm/avaje-ebeanorm-agent/4.9.1/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: no ivy file found for org.avaje.ebeanorm#avaje-ebeanorm-agent;4.9.1[0m
-[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.avaje.ebeanorm/avaje-ebeanorm-agent/4.9.1/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.avaje.ebeanorm/avaje-ebeanorm-agent/4.9.1/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	sbt-plugin-releases: no ivy file found for org.avaje.ebeanorm#avaje-ebeanorm-agent;4.9.1[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Lina8a\.ivy2\local\org.avaje.ebeanorm\avaje-ebeanorm-agent\4.9.1\ivys\ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.avaje.ebeanorm#avaje-ebeanorm-agent;4.9.1[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/avaje/ebeanorm/avaje-ebeanorm-agent/4.9.1/avaje-ebeanorm-agent-4.9.1.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.avaje.ebeanorm#avaje-ebeanorm-agent;4.9.1[0m
-[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/avaje/ebeanorm/avaje-ebeanorm-agent/4.9.1/avaje-ebeanorm-agent-4.9.1.pom (4.9.1)[0m
-[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/avaje/ebeanorm/avaje-ebeanorm-agent/4.9.1/avaje-ebeanorm-agent-4.9.1.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/avaje/ebeanorm/avaje-ebeanorm-agent/4.9.1/avaje-ebeanorm-agent-4.9.1.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/avaje/ebeanorm/avaje-ebeanorm-agent/4.9.1/avaje-ebeanorm-agent-4.9.1.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/avaje/ebeanorm/avaje-ebeanorm-agent/4.9.1/avaje-ebeanorm-agent-4.9.1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.avaje.ebeanorm#avaje-ebeanorm-agent;4.9.1!avaje-ebeanorm-agent.pom(pom.original) (367ms)[0m
-[0m[[0minfo[0m] [0mResolving org.avaje#avaje-javaparent;2.1 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.avaje#avaje-javaparent;2.1 {}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.avaje#avaje-javaparent;2.1[0m
-[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/org.avaje.ebeanorm/avaje-ebeanorm-agent/4.9.1/jars/avaje-ebeanorm-agent.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.avaje.ebeanorm/avaje-ebeanorm-agent/4.9.1/jars/avaje-ebeanorm-agent.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.avaje.ebeanorm/avaje-ebeanorm-agent/4.9.1/jars/avaje-ebeanorm-agent.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.avaje.ebeanorm/avaje-ebeanorm-agent/4.9.1/jars/avaje-ebeanorm-agent.jar[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Lina8a\.ivy2\local\org.avaje.ebeanorm\avaje-ebeanorm-agent\4.9.1\jars\avaje-ebeanorm-agent.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/avaje/ebeanorm/avaje-ebeanorm-agent/4.9.1/avaje-ebeanorm-agent-4.9.1.jar[0m
-[0m[[0mdebug[0m] [0m	found org.avaje.ebeanorm#avaje-ebeanorm-agent;4.9.1 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.avaje.ebeanorm#avaje-ebeanorm-agent;4.9.1[0m
+[0m[[0mdebug[0m] [0m	found org.avaje.ebeanorm#avaje-ebeanorm-agent;4.9.1 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbt#sbt-play-ebean;3.0.0->org.avaje.ebeanorm#avaje-ebeanorm-agent;4.9.1 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.sbt#sbt-play-ebean;3.0.0->org.avaje.ebeanorm#avaje-ebeanorm-agent;4.9.1 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.avaje.ebeanorm#avaje-ebeanorm-agent;4.9.1->javax.persistence#persistence-api;1.0 [compile->master(compile)][0m
@@ -13993,12 +13955,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.sbt#sbt-mocha;1.1.0!sbt-mocha.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.irundaia.sbt#sbt-sassify;1.4.2!sbt-sassify.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.sbt#sbt-play-enhancer;1.1.0!sbt-play-enhancer.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-play-ebean/scala_2.10/sbt_0.13/3.0.0/jars/sbt-play-ebean.jar[0m
-[0m[[0minfo[0m] [0mdownloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-play-ebean/scala_2.10/sbt_0.13/3.0.0/jars/sbt-play-ebean.jar ...[0m
-[0m[[0mdebug[0m] [0m	sbt-plugin-releases: downloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-play-ebean/scala_2.10/sbt_0.13/3.0.0/jars/sbt-play-ebean.jar[0m
-[0m[[0mdebug[0m] [0m	sbt-plugin-releases: downloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-play-ebean/scala_2.10/sbt_0.13/3.0.0/jars/sbt-play-ebean.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-play-ebean/scala_2.10/sbt_0.13/3.0.0/jars/sbt-play-ebean.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.typesafe.sbt#sbt-play-ebean;3.0.0!sbt-play-ebean.jar (3415ms)[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.sbt#sbt-play-ebean;3.0.0!sbt-play-ebean.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.sbteclipse#sbteclipse-plugin;4.0.0!sbteclipse-plugin.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#sbt-routes-compiler_2.10;2.5.6!sbt-routes-compiler_2.10.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#sbt-run-support_2.10;2.5.6!sbt-run-support_2.10.jar[0m
@@ -14113,12 +14070,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] net.java.dev.jna#jna;4.1.0!jna.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-enhancer;1.1.0!play-enhancer.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.javassist#javassist;3.18.2-GA!javassist.jar(bundle)[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/avaje/ebeanorm/avaje-ebeanorm-agent/4.9.1/avaje-ebeanorm-agent-4.9.1.jar[0m
-[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/avaje/ebeanorm/avaje-ebeanorm-agent/4.9.1/avaje-ebeanorm-agent-4.9.1.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/avaje/ebeanorm/avaje-ebeanorm-agent/4.9.1/avaje-ebeanorm-agent-4.9.1.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/avaje/ebeanorm/avaje-ebeanorm-agent/4.9.1/avaje-ebeanorm-agent-4.9.1.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/avaje/ebeanorm/avaje-ebeanorm-agent/4.9.1/avaje-ebeanorm-agent-4.9.1.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.avaje.ebeanorm#avaje-ebeanorm-agent;4.9.1!avaje-ebeanorm-agent.jar (1625ms)[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.avaje.ebeanorm#avaje-ebeanorm-agent;4.9.1!avaje-ebeanorm-agent.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] javax.persistence#persistence-api;1.0!persistence-api.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scalaz#scalaz-core_2.10;7.1.0!scalaz-core_2.10.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scalaz#scalaz-effect_2.10;7.1.0!scalaz-effect_2.10.jar(bundle)[0m
@@ -14172,7 +14124,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.11!apply-macro.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.6!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 23688ms :: artifacts dl 7667ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 14703ms :: artifacts dl 480ms[0m
 [0m[[0mdebug[0m] [0m	report for default#coco-backend-build;0.1-SNAPSHOT compile produced in C:\Users\Lina8a\Documents\job\asistencia\code\coco-backend\project\target\resolution-cache\reports\default-coco-backend-build-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#coco-backend-build;0.1-SNAPSHOT runtime produced in C:\Users\Lina8a\Documents\job\asistencia\code\coco-backend\project\target\resolution-cache\reports\default-coco-backend-build-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#coco-backend-build;0.1-SNAPSHOT test produced in C:\Users\Lina8a\Documents\job\asistencia\code\coco-backend\project\target\resolution-cache\reports\default-coco-backend-build-test.xml[0m
@@ -14186,5 +14138,5 @@
 [0m[[0mdebug[0m] [0m	report for default#coco-backend-build;0.1-SNAPSHOT docs produced in C:\Users\Lina8a\Documents\job\asistencia\code\coco-backend\project\target\resolution-cache\reports\default-coco-backend-build-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#coco-backend-build;0.1-SNAPSHOT pom produced in C:\Users\Lina8a\Documents\job\asistencia\code\coco-backend\project\target\resolution-cache\reports\default-coco-backend-build-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#coco-backend-build;0.1-SNAPSHOT scala-tool produced in C:\Users\Lina8a\Documents\job\asistencia\code\coco-backend\project\target\resolution-cache\reports\default-coco-backend-build-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (23688ms resolve - 7667ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (14703ms resolve - 480ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m
