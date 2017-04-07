@@ -19,11 +19,17 @@ public class FeatureModel extends Model{
 	public String owner;
 	
 	@Column(nullable = false)
+	public String ownerEmail;
+	
+	@Column(nullable = false)
 	public String name;
+	
+	@Column(nullable = true)
+	public String description;
 	
 	@Column(nullable = false)
 	public String extension;
 	
+	@Column(nullable = true)
 	public String file;
-
 }
