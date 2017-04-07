@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/Lina8a/Documents/job/asistencia/code/coco-backend/conf/routes
-// @DATE:Fri Apr 07 10:22:59 COT 2017
+// @DATE:Fri Apr 07 12:00:44 COT 2017
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -20,14 +20,20 @@ package controllers {
     }
 
   
+    // @LINE:18
+    def getFeatureModelById(id:String): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "featureModels/" + implicitly[PathBindable[String]].unbind("id", dynamicString(id)))
+    }
+  
     // @LINE:15
-    def get(): Call = {
+    def getFeatureModels(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "featureModels")
     }
   
     // @LINE:12
-    def create(): Call = {
+    def createFeatureModel(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "featureModels")
     }

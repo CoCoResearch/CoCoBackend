@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/Lina8a/Documents/job/asistencia/code/coco-backend/conf/routes
-// @DATE:Fri Apr 07 10:22:59 COT 2017
+// @DATE:Fri Apr 07 12:00:44 COT 2017
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -23,9 +23,19 @@ package controllers.javascript {
     }
 
   
+    // @LINE:18
+    def getFeatureModelById: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.FeatureModelController.getFeatureModelById",
+      """
+        function(id0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "featureModels/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("id", encodeURIComponent(id0))})
+        }
+      """
+    )
+  
     // @LINE:15
-    def get: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.FeatureModelController.get",
+    def getFeatureModels: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.FeatureModelController.getFeatureModels",
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "featureModels"})
@@ -34,8 +44,8 @@ package controllers.javascript {
     )
   
     // @LINE:12
-    def create: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.FeatureModelController.create",
+    def createFeatureModel: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.FeatureModelController.createFeatureModel",
       """
         function() {
           return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "featureModels"})
