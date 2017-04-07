@@ -11,4 +11,7 @@ GET     /assets/*file               controllers.Assets.versioned(path="/public",
 # Feature model creation
 POST	/featureModels				controllers.FeatureModelController.create
 
+# Feature models procurement
+GET		/featureModels				controllers.FeatureModelController.get
+
 

@@ -1,10 +1,11 @@
 package controllers;
 
 import java.io.File;
+import java.util.List;
+
 import com.fasterxml.jackson.databind.JsonNode;
 
 import models.FeatureModel;
-import play.api.Logger;
 import play.data.Form;
 import play.libs.Json;
 import play.mvc.*;
@@ -18,7 +19,6 @@ public class FeatureModelController extends Controller {
 	public Result create(){
 		try{
 			Form<FeatureModel> form = Form.form(FeatureModel.class).bindFromRequest();
-			System.out.println(form.data());
 			MultipartFormData<File> body = request().body().asMultipartFormData();
 			FilePart<File> filePart = body.getFile("file");
 			File file = filePart.getFile();
@@ -46,6 +46,11 @@ public class FeatureModelController extends Controller {
 		catch(Exception e) {
 			return badRequest(Util.createResponse("Json error: " + e.getMessage(), false));
 		}
-		
+	}
+	
+	public Result get(){
+		List<FeatureModel> featureModels = FeatureModel.find.all();
+		JsonNode json = Json.toJson(featureModels);
+		return created(Util.createResponse(json, true));
 	}
 }

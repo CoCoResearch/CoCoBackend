@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/Lina8a/Documents/job/asistencia/code/coco-backend/conf/routes
-// @DATE:Fri Apr 07 08:44:14 COT 2017
+// @DATE:Fri Apr 07 10:22:59 COT 2017
 
 package router
 
@@ -50,6 +50,7 @@ class Routes(
     ("""GET""", this.prefix, """controllers.HomeController.index"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """featureModels""", """controllers.FeatureModelController.create"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """featureModels""", """controllers.FeatureModelController.get"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -108,6 +109,23 @@ class Routes(
     )
   )
 
+  // @LINE:15
+  private[this] lazy val controllers_FeatureModelController_get3_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("featureModels")))
+  )
+  private[this] lazy val controllers_FeatureModelController_get3_invoker = createInvoker(
+    FeatureModelController_2.get,
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.FeatureModelController",
+      "get",
+      Nil,
+      "GET",
+      """ Feature models procurement""",
+      this.prefix + """featureModels"""
+    )
+  )
+
 
   def routes: PartialFunction[RequestHeader, Handler] = {
   
@@ -127,6 +145,12 @@ class Routes(
     case controllers_FeatureModelController_create2_route(params) =>
       call { 
         controllers_FeatureModelController_create2_invoker.call(FeatureModelController_2.create)
+      }
+  
+    // @LINE:15
+    case controllers_FeatureModelController_get3_route(params) =>
+      call { 
+        controllers_FeatureModelController_get3_invoker.call(FeatureModelController_2.get)
       }
   }
 }
