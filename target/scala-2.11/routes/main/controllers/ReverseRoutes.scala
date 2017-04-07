@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/Lina8a/Documents/job/asistencia/code/coco-backend/conf/routes
-// @DATE:Fri Apr 07 08:44:14 COT 2017
+// @DATE:Fri Apr 07 10:22:59 COT 2017
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -19,6 +19,12 @@ package controllers {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
+  
+    // @LINE:15
+    def get(): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "featureModels")
+    }
   
     // @LINE:12
     def create(): Call = {

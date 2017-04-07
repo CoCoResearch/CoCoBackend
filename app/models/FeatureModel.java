@@ -32,4 +32,6 @@ public class FeatureModel extends Model{
 	
 	@Column(nullable = true)
 	public String file;
+	
+	public static Finder<Long, FeatureModel> find = new Finder<Long,FeatureModel>(FeatureModel.class);
 }

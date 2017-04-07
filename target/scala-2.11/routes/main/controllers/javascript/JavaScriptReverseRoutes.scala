@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/Lina8a/Documents/job/asistencia/code/coco-backend/conf/routes
-// @DATE:Fri Apr 07 08:44:14 COT 2017
+// @DATE:Fri Apr 07 10:22:59 COT 2017
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -22,6 +22,16 @@ package controllers.javascript {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
+  
+    // @LINE:15
+    def get: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.FeatureModelController.get",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "featureModels"})
+        }
+      """
+    )
   
     // @LINE:12
     def create: JavaScriptReverseRoute = JavaScriptReverseRoute(
