@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/Lina8a/Documents/job/asistencia/code/coco-backend/conf/routes
-// @DATE:Fri Apr 07 12:00:44 COT 2017
+// @DATE:Sun Apr 09 14:38:07 COT 2017
 
 package router
 
@@ -21,7 +21,9 @@ class Routes(
   // @LINE:9
   Assets_1: controllers.Assets,
   // @LINE:12
-  FeatureModelController_2: controllers.FeatureModelController,
+  FeatureModelController_3: controllers.FeatureModelController,
+  // @LINE:21
+  GeneratorController_2: controllers.GeneratorController,
   val prefix: String
 ) extends GeneratedRouter {
 
@@ -32,14 +34,16 @@ class Routes(
     // @LINE:9
     Assets_1: controllers.Assets,
     // @LINE:12
-    FeatureModelController_2: controllers.FeatureModelController
-  ) = this(errorHandler, HomeController_0, Assets_1, FeatureModelController_2, "/")
+    FeatureModelController_3: controllers.FeatureModelController,
+    // @LINE:21
+    GeneratorController_2: controllers.GeneratorController
+  ) = this(errorHandler, HomeController_0, Assets_1, FeatureModelController_3, GeneratorController_2, "/")
 
   import ReverseRouteContext.empty
 
   def withPrefix(prefix: String): Routes = {
     router.RoutesPrefix.setPrefix(prefix)
-    new Routes(errorHandler, HomeController_0, Assets_1, FeatureModelController_2, prefix)
+    new Routes(errorHandler, HomeController_0, Assets_1, FeatureModelController_3, GeneratorController_2, prefix)
   }
 
   private[this] val defaultPrefix: String = {
@@ -52,6 +56,7 @@ class Routes(
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """featureModels""", """controllers.FeatureModelController.createFeatureModel"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """featureModels""", """controllers.FeatureModelController.getFeatureModels"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """featureModels/""" + "$" + """id<[^/]+>""", """controllers.FeatureModelController.getFeatureModelById(id:String)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """generator/""" + "$" + """id<[^/]+>""", """controllers.GeneratorController.generateConfiguratorById(id:String)"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -98,7 +103,7 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("featureModels")))
   )
   private[this] lazy val controllers_FeatureModelController_createFeatureModel2_invoker = createInvoker(
-    FeatureModelController_2.createFeatureModel,
+    FeatureModelController_3.createFeatureModel,
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.FeatureModelController",
@@ -115,7 +120,7 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("featureModels")))
   )
   private[this] lazy val controllers_FeatureModelController_getFeatureModels3_invoker = createInvoker(
-    FeatureModelController_2.getFeatureModels,
+    FeatureModelController_3.getFeatureModels,
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.FeatureModelController",
@@ -132,7 +137,7 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("featureModels/"), DynamicPart("id", """[^/]+""",true)))
   )
   private[this] lazy val controllers_FeatureModelController_getFeatureModelById4_invoker = createInvoker(
-    FeatureModelController_2.getFeatureModelById(fakeValue[String]),
+    FeatureModelController_3.getFeatureModelById(fakeValue[String]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.FeatureModelController",
@@ -141,6 +146,23 @@ class Routes(
       "GET",
       """ Feature models procurement""",
       this.prefix + """featureModels/""" + "$" + """id<[^/]+>"""
+    )
+  )
+
+  // @LINE:21
+  private[this] lazy val controllers_GeneratorController_generateConfiguratorById5_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("generator/"), DynamicPart("id", """[^/]+""",true)))
+  )
+  private[this] lazy val controllers_GeneratorController_generateConfiguratorById5_invoker = createInvoker(
+    GeneratorController_2.generateConfiguratorById(fakeValue[String]),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.GeneratorController",
+      "generateConfiguratorById",
+      Seq(classOf[String]),
+      "GET",
+      """ Feature models procurement""",
+      this.prefix + """generator/""" + "$" + """id<[^/]+>"""
     )
   )
 
@@ -162,19 +184,25 @@ class Routes(
     // @LINE:12
     case controllers_FeatureModelController_createFeatureModel2_route(params) =>
       call { 
-        controllers_FeatureModelController_createFeatureModel2_invoker.call(FeatureModelController_2.createFeatureModel)
+        controllers_FeatureModelController_createFeatureModel2_invoker.call(FeatureModelController_3.createFeatureModel)
       }
   
     // @LINE:15
     case controllers_FeatureModelController_getFeatureModels3_route(params) =>
       call { 
-        controllers_FeatureModelController_getFeatureModels3_invoker.call(FeatureModelController_2.getFeatureModels)
+        controllers_FeatureModelController_getFeatureModels3_invoker.call(FeatureModelController_3.getFeatureModels)
       }
   
     // @LINE:18
     case controllers_FeatureModelController_getFeatureModelById4_route(params) =>
       call(params.fromPath[String]("id", None)) { (id) =>
-        controllers_FeatureModelController_getFeatureModelById4_invoker.call(FeatureModelController_2.getFeatureModelById(id))
+        controllers_FeatureModelController_getFeatureModelById4_invoker.call(FeatureModelController_3.getFeatureModelById(id))
+      }
+  
+    // @LINE:21
+    case controllers_GeneratorController_generateConfiguratorById5_route(params) =>
+      call(params.fromPath[String]("id", None)) { (id) =>
+        controllers_GeneratorController_generateConfiguratorById5_invoker.call(GeneratorController_2.generateConfiguratorById(id))
       }
   }
 }

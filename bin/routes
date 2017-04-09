@@ -16,3 +16,6 @@ GET		/featureModels				controllers.FeatureModelController.getFeatureModels
 
 # Feature models procurement
 GET		/featureModels/:id			controllers.FeatureModelController.getFeatureModelById(id)
+
+# Feature models procurement
+GET		/generator/:id			controllers.GeneratorController.generateConfiguratorById(id)
