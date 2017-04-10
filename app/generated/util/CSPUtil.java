@@ -1,4 +1,4 @@
-package util;
+package generated.util;
 
 public class CSPUtil {
 	public static final String PARENT_CHILD_CONST = "PARENT_CHILD_CONST";

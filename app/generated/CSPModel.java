@@ -19,7 +19,8 @@ import org.chocosolver.solver.variables.BoolVar;
 import org.chocosolver.solver.variables.IntVar;
 import org.chocosolver.solver.variables.Variable;
 import org.chocosolver.solver.variables.VariableFactory;
-import util.CSPUtil;
+
+import generated.util.CSPUtil;
 
 public class CSPModel {
 	private static Solver solver;

@@ -1,26 +1,25 @@
 <project name="CSPModel" basedir="." default="main">
-	<target name="clean">
-        <delete dir="build"/>
-    </target>
-
-    <target name="compile">
-        <mkdir dir="build/classes"/>
-        <javac srcdir="app/generated" destdir="build/classes"/>
-    </target>
-
-    <target name="jar">
-        <mkdir dir="build/jar"/>
-        <jar destfile="build/jar/CSPModel.jar" basedir="build/classes">
-            <manifest>
-                <attribute name="Main-Class" value="generated.CSPModel"/>
-            </manifest>
-        </jar>
-    </target>
-
-    <target name="run">
-        <java jar="build/jar/CSPModel.jar" fork="true"/>
-    </target>
+	<path id="classpath">
+		<fileset dir="../lib" includes="**/*.jar" />
+	</path>
 	
-	<target name="clean-build" depends="clean,jar"/>
-	<target name="main" depends="clean,run"/>
+	<target name="clean">
+		<delete dir="../build/classes" />
+	</target>
+	
+	<target name="compile" depends="clean">
+		<mkdir dir="../build/classes" />
+		<javac srcdir="../app/generated" destdir="../build/classes" includeantruntime="false" classpathref="classpath" />
+	</target>
+	
+	<target name="main" depends="compile">
+		<java classname="generated.CSPModel" fork="yes">
+			<arg value="-h"/>
+			<classpath>
+				<pathelement path="../lib/choco-solver-3.3.3.jar"/>
+				<pathelement path="../lib/choco-solver-3.3.3-with-dependencies.jar"/>
+				<pathelement path="../build/classes"/>
+			</classpath>
+		</java>
+	</target>
 </project>
