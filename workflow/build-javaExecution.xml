@@ -9,7 +9,7 @@
 	
 	<target name="compile" depends="clean">
 		<mkdir dir="../build/classes" />
-		<javac srcdir="../app/generated" destdir="../build/classes" includeantruntime="false" classpathref="classpath" />
+		<javac fork="yes" srcdir="../app/generated" destdir="../build/classes" includeantruntime="false" classpathref="classpath" />
 	</target>
 	
 	<target name="main" depends="compile">
