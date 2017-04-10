@@ -7,6 +7,8 @@
   <classpathentry kind="lib" path=".\lib\ant-launcher-1.10.0.jar"/>
   <classpathentry kind="lib" path=".\lib\antlr.jar"/>
   <classpathentry kind="lib" path=".\lib\choco-2.1.0-basic+old.jar"/>
+  <classpathentry kind="lib" path=".\lib\choco-solver-3.3.3-with-dependencies.jar"/>
+  <classpathentry kind="lib" path=".\lib\choco-solver-3.3.3.jar"/>
   <classpathentry kind="lib" path=".\lib\ChocoReasoner-1.1.1-sources.jar"/>
   <classpathentry kind="lib" path=".\lib\ChocoReasoner-1.1.1.jar"/>
   <classpathentry kind="lib" path=".\lib\coco-standalone.jar"/>

@@ -74,3 +74,11 @@ eclipse
 update
 compile
 run
+clean
+eclipse
+update
+compile
+run
+clean
+eclipse
+run

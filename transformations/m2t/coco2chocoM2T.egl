@@ -11,7 +11,7 @@
  
 %]
 
-package multiCloud;
+package generated;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -31,9 +31,9 @@ import org.chocosolver.solver.variables.BoolVar;
 import org.chocosolver.solver.variables.IntVar;
 import org.chocosolver.solver.variables.Variable;
 import org.chocosolver.solver.variables.VariableFactory;
-import searchStrategies.Utilities;
+import util.CSPUtil;
 
-public class MultiCloud {
+public class CSPModel {
 	private static Solver solver;
 	[%declareFeatures();%]
 	[%declareAttributeTypes();%]
@@ -130,8 +130,8 @@ public class MultiCloud {
 	 * each one having a complete valid configuration. Features that are not
 	 * included in at least one configuration are not part of the resulting
 	 * CSP.
-	 * TODO: Contemplar los siguientes escenarios (parametrización de búsqueda):
-	 *  1. Una configuración parcial
+	 * TODO: Contemplar los siguientes escenarios (parametrizaciï¿½n de bï¿½squeda):
+	 *  1. Una configuraciï¿½n parcial
 	 *  2. Varias configuraciones parciales (con algunas completas?)
 	 * TODO: definir escenarios de modelamiento:
 	 *  1. Un solo FM
@@ -259,7 +259,7 @@ public class MultiCloud {
 	 * feature models.
 	 * TODO: Falta considerar las reglas de selection state asociadas a 
 	 * estos modelos. (Validar comportamiento dependiendo del escenario
-	 * de decisión definido: 1. varias completas; 2. una parcial; 3. varias
+	 * de decisiï¿½n definido: 1. varias completas; 2. una parcial; 3. varias
 	 * parciales)
 	 */
 	operation defineAlternativeFMFeatures(features : Any, mandatoryFeatures : OrderedSet, forbiddenFeatures : OrderedSet) {
@@ -307,7 +307,7 @@ public class MultiCloud {
 	/**
 	 * Operation responsible of creating the data structures that
 	 * store feature attributes.
-	 * TODO: validar si la estructura de HasMap es la má adecuada
+	 * TODO: validar si la estructura de HasMap es la mï¿½ adecuada
 	 * o se empplean matrices como en CSPTool.
 	 */
 	operation defineAttributeTypes() {
@@ -340,7 +340,7 @@ public class MultiCloud {
 	 * ALERT: the domain feature model does not have feature attributes.
 	 * these are only associated to non-domain feature models.
 	 * TODO: falta manejar el tema del tipo de atributo independiente.
-	 * Qué operaciones se pueden aplicar? Comenzar con multiplicación.
+	 * Quï¿½ operaciones se pueden aplicar? Comenzar con multiplicaciï¿½n.
 	 */
 	operation defineFeatureAttributes() {
 		var fms = FMCoCo!FeatureModel.all();
@@ -378,7 +378,7 @@ public class MultiCloud {
 	 * It distinguishes between String, double, and boolean
 	 * data types. Moreover, if the parent feature is deselected
 	 * the attribute var assumes a value of 0.
-	 * TODO: falta manejar decimales de una manera más inteligente.
+	 * TODO: falta manejar decimales de una manera mï¿½s inteligente.
 	 */
 	operation defineVarPerAttributeType(attr : FMCoCo!FeatureAttribute, feature : FMCoCo!Feature) {
 		//var defaultValue = attr.elements[0].value.replace("'", "").asInteger();
@@ -481,7 +481,7 @@ public class MultiCloud {
 	 * recursive manner. All constraints are transformed according 
 	 * to their types (Mandatory, Or, Alternative)
 	 * @param: feature - a CoCo feature
-	 * TODO: modificar implementación de Mandatory (ahora es atributo)
+	 * TODO: modificar implementaciï¿½n de Mandatory (ahora es atributo)
 	 * y arreglar error del OR (se requiere un implies previo)
 	 */
 	operation defineTreeConstraintsRecursive(feature : FMCoCo!Feature) {
@@ -495,13 +495,13 @@ public class MultiCloud {
 				for(f in features) {
 					if(f.mandatory == true) {
 					%]		Constraint mandatory[%=feature.id%]_[%=f.id%] = IntConstraintFactory.arithm([%=feature.id%], "=", [%=f.id%]);
-		mandatory[%=feature.id%]_[%=f.id%].setName(Utilities.MANDATORY_TC);
+		mandatory[%=feature.id%]_[%=f.id%].setName(CSPUtil.MANDATORY_TC);
 		solver.post(mandatory[%=feature.id%]_[%=f.id%]);
 					[%
 					}
 					else {
 					%]		Constraint optional[%=feature.id%]_[%=f.id%] = IntConstraintFactory.arithm([%=f.id%], "<=", [%=feature.id%]);
-		optional[%=feature.id%]_[%=f.id%].setName(Utilities.OPTIONAL_TC);
+		optional[%=feature.id%]_[%=f.id%].setName(CSPUtil.OPTIONAL_TC);
 		solver.post(optional[%=feature.id%]_[%=f.id%]);
 					[%
 					}
@@ -520,10 +520,10 @@ public class MultiCloud {
 				}
 			%]		solver.post(IntConstraintFactory.sum(varsOr[%=feature.id%]_[%=constraints.indexOf(c)%], sumOr[%=feature.id%]_[%=constraints.indexOf(c)%]));
 		Constraint or1[%=feature.id%]_[%=constraints.indexOf(c)%] = IntConstraintFactory.arithm(sumOr[%=feature.id%]_[%=constraints.indexOf(c)%], ">=", 1);
-		or1[%=feature.id%]_[%=constraints.indexOf(c)%].setName(Utilities.OR_TC);
+		or1[%=feature.id%]_[%=constraints.indexOf(c)%].setName(CSPUtil.OR_TC);
 		
 		Constraint or0[%=feature.id%]_[%=constraints.indexOf(c)%] = IntConstraintFactory.arithm(sumOr[%=feature.id%]_[%=constraints.indexOf(c)%], "=", 0);
-		or0[%=feature.id%]_[%=constraints.indexOf(c)%].setName(Utilities.OR_TC);
+		or0[%=feature.id%]_[%=constraints.indexOf(c)%].setName(CSPUtil.OR_TC);
 		LogicalConstraintFactory.ifThenElse([%=feature.id%], or1[%=feature.id%]_[%=constraints.indexOf(c)%], or0[%=feature.id%]_[%=constraints.indexOf(c)%]);
 			
 			[%
@@ -541,10 +541,10 @@ public class MultiCloud {
 				}
 			%]		solver.post(IntConstraintFactory.sum(varsXor[%=feature.id%]_[%=constraints.indexOf(c)%], sumXor[%=feature.id%]_[%=constraints.indexOf(c)%]));
 		Constraint xor1[%=feature.id%]_[%=constraints.indexOf(c)%] = IntConstraintFactory.arithm(sumXor[%=feature.id%]_[%=constraints.indexOf(c)%], "=", 1);
-		xor1[%=feature.id%]_[%=constraints.indexOf(c)%].setName(Utilities.XOR_TC);
+		xor1[%=feature.id%]_[%=constraints.indexOf(c)%].setName(CSPUtil.XOR_TC);
 		
 		Constraint xor0[%=feature.id%]_[%=constraints.indexOf(c)%] = IntConstraintFactory.arithm(sumXor[%=feature.id%]_[%=constraints.indexOf(c)%], "=", 0);
-		xor0[%=feature.id%]_[%=constraints.indexOf(c)%].setName(Utilities.XOR_TC);
+		xor0[%=feature.id%]_[%=constraints.indexOf(c)%].setName(CSPUtil.XOR_TC);
 		
 		LogicalConstraintFactory.ifThenElse([%=feature.id%], xor1[%=feature.id%]_[%=constraints.indexOf(c)%], xor0[%=feature.id%]_[%=constraints.indexOf(c)%]);
 			
@@ -658,19 +658,19 @@ public class MultiCloud {
 	 * @param: op - String with involved operation between 
 	 * expressions and/or features.
 	 * ALERT: only works for 2 elements permutation (ee, ef, ff)
-	 * TODO: expresar más reglas lógicas.
+	 * TODO: expresar mï¿½s reglas lï¿½gicas.
 	 */
 	operation defineCTConstraintsImpliesAndOr(expressions : OrderedSet, features : OrderedSet, op : String) {
 		if(features.size() > 0) {
 			if(features.size() == 2) {
 				%]		Constraint requires[%=features.first().id%]_[%=features.last().id%] = IntConstraintFactory.arithm([%=features.first().id%], "<=", [%=features.last().id%]);
-		requires[%=features.first().id%]_[%=features.last().id%].setName(Utilities.REQUIRES_CTC);
+		requires[%=features.first().id%]_[%=features.last().id%].setName(CSPUtil.REQUIRES_CTC);
 		solver.post(requires[%=features.first().id%]_[%=features.last().id%]);
 		[%
 			}
 			else {
 				%]		Constraint excludes[%=features.first().id%]_[%=features.last().id%] = IntConstraintFactory.arithm([%=features.first().id%], "+", [%=defineCrossTreeConstraintsRecursive(expressions.first())%]);
-		excludes[%=features.first().id%]_[%=features.last().id%].setName(Utilities.EXCLUDES_CTC);
+		excludes[%=features.first().id%]_[%=features.last().id%].setName(CSPUtil.EXCLUDES_CTC);
 		solver.post(excludes[%=features.first().id%]_[%=features.last().id%]);
 		[%
 			}
@@ -751,19 +751,19 @@ public class MultiCloud {
 	 * @param: op - String with involved operation between 
 	 * expressions and/or features.
 	 * ALERT: only works for 2 elements permutation (ee, ef, ff)
-	 * TODO: expresar más reglas lógicas.
+	 * TODO: expresar mï¿½s reglas lï¿½gicas.
 	 */
 	operation defineCMConstraintsImpliesAndOr(expressions : OrderedSet, features : OrderedSet, op : String) {
 		if(features.size() > 0) {
 			if(features.size() == 2) {
 				%]		Constraint requires[%=features.first().id%]_[%=features.last().id%] = IntConstraintFactory.arithm([%=features.first().id%], "<=", [%=features.last().id%]);
-		requires[%=features.first().id%]_[%=features.last().id%].setName(Utilities.REQUIRES_CMC);
+		requires[%=features.first().id%]_[%=features.last().id%].setName(CSPUtil.REQUIRES_CMC);
 		solver.post(requires[%=features.first().id%]_[%=features.last().id%]);
 		[%
 			}
 			else {
 				%]		Constraint excludes[%=features.first().id%]_[%=features.last().id%] = IntConstraintFactory.arithm([%=features.first().id%], "+", [%=defineCrossModelConstraintsRecursive(expressions.first())%]);
-		excludes[%=features.first().id%]_[%=features.last().id%].setName(Utilities.EXCLUDES_CMC);
+		excludes[%=features.first().id%]_[%=features.last().id%].setName(CSPUtil.EXCLUDES_CMC);
 		solver.post(excludes[%=features.first().id%]_[%=features.last().id%]);
 		[%
 			}
@@ -851,7 +851,7 @@ public class MultiCloud {
 	 * Operation responsible of defining optimization constraints.
 	 * Total vars are generated. It distinguishes between a one-
 	 * variable optimizaation and multi-variable optimization.
-	 * TODO: acotar dominio de las variables de agregación
+	 * TODO: acotar dominio de las variables de agregaciï¿½n
 	 */
 	operation defineDROptimization(attrTypes : OrderedSet) {
 		var solutionConstraints = FMCoCo!CoCo.all.first().solutionConstraints.select(x|x.type == FMCoCo!SCType#optimization);

@@ -14124,7 +14124,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.11!apply-macro.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.6!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 14703ms :: artifacts dl 480ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 12433ms :: artifacts dl 241ms[0m
 [0m[[0mdebug[0m] [0m	report for default#coco-backend-build;0.1-SNAPSHOT compile produced in C:\Users\Lina8a\Documents\job\asistencia\code\coco-backend\project\target\resolution-cache\reports\default-coco-backend-build-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#coco-backend-build;0.1-SNAPSHOT runtime produced in C:\Users\Lina8a\Documents\job\asistencia\code\coco-backend\project\target\resolution-cache\reports\default-coco-backend-build-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#coco-backend-build;0.1-SNAPSHOT test produced in C:\Users\Lina8a\Documents\job\asistencia\code\coco-backend\project\target\resolution-cache\reports\default-coco-backend-build-test.xml[0m
@@ -14138,5 +14138,5 @@
 [0m[[0mdebug[0m] [0m	report for default#coco-backend-build;0.1-SNAPSHOT docs produced in C:\Users\Lina8a\Documents\job\asistencia\code\coco-backend\project\target\resolution-cache\reports\default-coco-backend-build-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#coco-backend-build;0.1-SNAPSHOT pom produced in C:\Users\Lina8a\Documents\job\asistencia\code\coco-backend\project\target\resolution-cache\reports\default-coco-backend-build-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#coco-backend-build;0.1-SNAPSHOT scala-tool produced in C:\Users\Lina8a\Documents\job\asistencia\code\coco-backend\project\target\resolution-cache\reports\default-coco-backend-build-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (14703ms resolve - 480ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (12433ms resolve - 241ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

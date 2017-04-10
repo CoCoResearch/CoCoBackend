@@ -8,6 +8,11 @@ import play.libs.Json;
 public class Util {
 
 	public static final String BUCKET_MAIN_COCO = "coco-backend";
+	public static final String BUCKET_COCO_MODELS = "coco/";
+	public static final String BUCKET_FAMA_MODELS = "fama/";
+	public static final String COCO_MODEL_EXTENSION = "xmi";
+	public static final String COCO_MODEL_PATH = "models/";
+	public static final String JAVA_MODEL_PATH = "app/generated/";
 	public static final String AWS_S3_URL = "https://s3-us-west-2.amazonaws.com";
 	
 	/**

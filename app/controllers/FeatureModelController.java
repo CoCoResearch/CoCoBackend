@@ -24,6 +24,7 @@ public class FeatureModelController extends Controller {
 	 */
 	public Result createFeatureModel(){
 		try{
+			boolean uploaded;
 			Form<FeatureModel> form = Form.form(FeatureModel.class).bindFromRequest();
 			MultipartFormData<File> body = request().body().asMultipartFormData();
 			FilePart<File> filePart = body.getFile("file");
@@ -41,12 +42,18 @@ public class FeatureModelController extends Controller {
 			featureModel.extension = form.get().extension;
 			featureModel.save();
 			
-			AWSS3.uploadFile(Util.BUCKET_MAIN_COCO, featureModel.id + "." + featureModel.extension, file);
-			featureModel.file = Util.AWS_S3_URL + "/" + Util.BUCKET_MAIN_COCO + "/" + featureModel.id + "." + featureModel.extension;
-			featureModel.update();
+			uploaded = AWSS3.uploadFile(Util.BUCKET_MAIN_COCO, Util.BUCKET_COCO_MODELS + featureModel.id + "." + featureModel.extension, file);
 			
-			JsonNode json = Json.toJson(featureModel);
-			return created(Util.createResponse(json, true));
+			if(uploaded) {
+				featureModel.file = Util.AWS_S3_URL + "/" + Util.BUCKET_MAIN_COCO + "/" + Util.BUCKET_COCO_MODELS + featureModel.id + "." + featureModel.extension;
+				featureModel.update();
+				
+				JsonNode json = Json.toJson(featureModel);
+				return created(Util.createResponse(json, true));
+			}
+			else {
+				return badRequest(Util.createResponse("AWS S3 uploading file error.", false));
+			}
 		}
 		
 		catch(Exception e) {
