@@ -9,11 +9,6 @@ import org.chocosolver.solver.Solver;
 import org.chocosolver.solver.constraints.Constraint;
 import org.chocosolver.solver.constraints.IntConstraintFactory;
 import org.chocosolver.solver.constraints.LogicalConstraintFactory;
-import org.chocosolver.solver.constraints.SatFactory;
-import org.chocosolver.solver.constraints.nary.cnf.LogOp;
-import org.chocosolver.solver.search.loop.monitors.SMF;
-import org.chocosolver.solver.search.strategy.IntStrategyFactory;
-import org.chocosolver.solver.search.strategy.strategy.IntStrategy;
 import org.chocosolver.solver.trace.Chatterbox;
 import org.chocosolver.solver.variables.BoolVar;
 import org.chocosolver.solver.variables.IntVar;
@@ -1584,7 +1579,7 @@ public class CSPModel {
 		IntVar[] varsAtribute0 = new IntVar[featureAttrAtribute0.values().size()];
 			
 		for(int i = 0; i < varsAtribute0List.size(); i++) {
-		varsAtribute0[i] = (IntVar) varsAtribute0List.get(i);
+		varsAtribute0[i] = varsAtribute0List.get(i);
 		}
 		
 		List<IntVar> varsAtribute1List = new ArrayList<IntVar>(featureAttrAtribute1.values());

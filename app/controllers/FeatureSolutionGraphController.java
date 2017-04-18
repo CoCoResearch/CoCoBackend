@@ -5,8 +5,9 @@ import java.util.List;
 
 import com.fasterxml.jackson.databind.JsonNode;
 
-import coco.generators.CSPGenerator;
-import coco.generators.IGenerator;
+import coco.modifiers.AddFaMaFMModifier;
+import coco.modifiers.IModifier;
+import coco.util.FileManager;
 import models.FeatureModel;
 import play.data.Form;
 import play.libs.Json;
@@ -31,6 +32,7 @@ public class FeatureSolutionGraphController extends Controller {
 			MultipartFormData<File> body = request().body().asMultipartFormData();
 			FilePart<File> filePart = body.getFile("file");
 			File file = filePart.getFile();
+			File xmiFile;
 			
 			if(form.hasErrors()) {
 				return badRequest(Util.createResponse("Json error.", false));
@@ -44,10 +46,30 @@ public class FeatureSolutionGraphController extends Controller {
 			featureSolutionGraph.extension = form.get().extension;
 			featureSolutionGraph.save();
 			
-			uploaded = AWSS3.uploadFile(Util.BUCKET_MAIN_COCO, Util.BUCKET_COCO_MODELS + featureSolutionGraph.id + "." + featureSolutionGraph.extension, file);
+			if(featureSolutionGraph.extension.equals("afm")) {
+				String xmiPath = Util.COCO_MODEL_PATH + featureSolutionGraph.id + Util.COCO_MODEL_EXTENSION;
+				String famaPath = Util.COCO_MODEL_PATH + featureSolutionGraph.id + Util.FAMA_MODEL_EXTENSION;
+				File famaFile = new File(famaPath);
+				
+				FileManager manager = new FileManager();
+				manager.copyFile(file, famaFile);
+				Util.waitUntilFileIsCreated(famaFile);
+				
+				IModifier modifier = new AddFaMaFMModifier();
+				modifier.modifyFSG(xmiPath, famaPath);
+				xmiFile = famaFile;
+				Util.waitUntilFileIsCreated(famaFile);
+				
+				featureSolutionGraph.extension = "xmi";
+			}
+			else {
+				xmiFile = file;
+			}
+			
+			uploaded = AWSS3.uploadFile(Util.BUCKET_MAIN_COCO, Util.BUCKET_COCO_MODELS + featureSolutionGraph.id + Util.COCO_MODEL_EXTENSION, xmiFile);
 			
 			if(uploaded) {
-				featureSolutionGraph.file = Util.AWS_S3_URL + "/" + Util.BUCKET_MAIN_COCO + "/" + Util.BUCKET_COCO_MODELS + featureSolutionGraph.id + "." + featureSolutionGraph.extension;
+				featureSolutionGraph.file = Util.AWS_S3_URL + "/" + Util.BUCKET_MAIN_COCO + "/" + Util.BUCKET_COCO_MODELS + featureSolutionGraph.id + Util.COCO_MODEL_EXTENSION;
 				featureSolutionGraph.update();
 				
 				JsonNode json = Json.toJson(featureSolutionGraph);
@@ -59,6 +81,7 @@ public class FeatureSolutionGraphController extends Controller {
 		}
 		
 		catch(Exception e) {
+			e.printStackTrace();
 			return badRequest(Util.createResponse("Json error: " + e.getMessage(), false));
 		}
 	}
@@ -84,22 +107,49 @@ public class FeatureSolutionGraphController extends Controller {
 		return created(Util.createResponse(json, true));
 	}
 	
-	public Result getFeatureModelToFSGById(String id){
+	/**
+	 * Add a feature model to a feature solution graph,
+	 * based on the id obtained as parameter. The file is
+	 * updated in AWS S3. 
+	 * @param id - 
+	 * @return
+	 */
+	public Result addFeatureModelToFSGById(String id){
+		Form<FeatureModel> form = Form.form(FeatureModel.class).bindFromRequest();
+		MultipartFormData<File> body = request().body().asMultipartFormData();
+		FilePart<File> filePart = body.getFile("file");
+		File file = filePart.getFile();
+		
+		if(form.hasErrors()) {
+			return badRequest(Util.createResponse("Json error.", false));
+		}
+		
+		if(file == null) {
+			return badRequest(Util.createResponse("No file error.", false));
+		}
+		
 		long integerId = Integer.parseInt(id);
 		boolean downloaded;
 		FeatureModel featureSolutionGraph = FeatureModel.find.byId(integerId);
+		String xmiPath = Util.COCO_MODEL_PATH + featureSolutionGraph.id + Util.COCO_MODEL_EXTENSION;
+		String famaPath = Util.COCO_MODEL_PATH + featureSolutionGraph.id + Util.AFM2COCO_MODEL_EXTENSION;
 		
-		downloaded = AWSS3.downloadFile(Util.BUCKET_MAIN_COCO, Util.BUCKET_COCO_MODELS + featureSolutionGraph.id + "." + Util.COCO_MODEL_EXTENSION, 
-				Util.COCO_MODEL_PATH + featureSolutionGraph.id + "." + Util.COCO_MODEL_EXTENSION);
+		downloaded = AWSS3.downloadFile(Util.BUCKET_MAIN_COCO, Util.BUCKET_COCO_MODELS + featureSolutionGraph.id + Util.COCO_MODEL_EXTENSION, 
+				xmiPath);
 		
 		if(downloaded) {
-			IGenerator generator = new CSPGenerator();
-			generator.generateConfigurationProgram(Util.COCO_MODEL_PATH + featureSolutionGraph.id + "." + Util.COCO_MODEL_EXTENSION, 
-					Util.JAVA_MODEL_PATH + "CSPModel.java");
-			generator.runConfigurationProgram();
+			IModifier modifier = new AddFaMaFMModifier();
+			modifier.modifyFSG(xmiPath, famaPath);
 			
-			JsonNode json = Json.toJson("OK");
-			return created(Util.createResponse(json, true));
+			boolean uploaded = AWSS3.uploadFile(Util.BUCKET_MAIN_COCO, Util.BUCKET_COCO_MODELS + featureSolutionGraph.id + "." + featureSolutionGraph.extension, file);
+			
+			if(uploaded) {
+				JsonNode json = Json.toJson(featureSolutionGraph);
+				return created(Util.createResponse(json, true));
+			}
+			else{
+				return badRequest(Util.createResponse("AWS S3 uploading file error.", false));
+			}
 		}
 		else{
 			return badRequest(Util.createResponse("AWS S3 downloading file error.", false));

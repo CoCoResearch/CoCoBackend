@@ -18,12 +18,12 @@ public class ConfiguratorController extends Controller {
 		long integerId = Integer.parseInt(id);
 		FeatureModel featureModel = FeatureModel.find.byId(integerId);
 		
-		downloaded = AWSS3.downloadFile(Util.BUCKET_MAIN_COCO, Util.BUCKET_COCO_MODELS + featureModel.id + "." + Util.COCO_MODEL_EXTENSION, 
-				Util.COCO_MODEL_PATH + featureModel.id + "." + Util.COCO_MODEL_EXTENSION);
+		downloaded = AWSS3.downloadFile(Util.BUCKET_MAIN_COCO, Util.BUCKET_COCO_MODELS + featureModel.id + Util.COCO_MODEL_EXTENSION, 
+				Util.COCO_MODEL_PATH + featureModel.id + Util.COCO_MODEL_EXTENSION);
 		
 		if(downloaded) {
 			IGenerator generator = new CSPGenerator();
-			generator.generateConfigurationProgram(Util.COCO_MODEL_PATH + featureModel.id + "." + Util.COCO_MODEL_EXTENSION, 
+			generator.generateConfigurationProgram(Util.COCO_MODEL_PATH + featureModel.id + Util.COCO_MODEL_EXTENSION, 
 					Util.JAVA_MODEL_PATH + "CSPModel.java");
 			generator.runConfigurationProgram();
 			

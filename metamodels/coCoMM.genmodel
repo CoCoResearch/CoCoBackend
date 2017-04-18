@@ -6,8 +6,7 @@
   <foreignModel>coCoMM.ecore</foreignModel>
   <genPackages prefix="CoCoMM" disposableProviderFactory="true" ecorePackage="coCoMM.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="coCoMM.ecore#//TreeConstraintType">
-      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//TreeConstraintType/Mandatory"/>
-      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//TreeConstraintType/Optional"/>
+      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//TreeConstraintType/And"/>
       <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//TreeConstraintType/Alternative"/>
       <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//TreeConstraintType/Or"/>
     </genEnums>
@@ -74,6 +73,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference coCoMM.ecore#//Feature/treeConstraints"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference coCoMM.ecore#//Feature/featureModel"/>
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference coCoMM.ecore#//Feature/featureAttributes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//Feature/mandatory"/>
     </genClasses>
     <genClasses ecoreClass="coCoMM.ecore#//TreeConstraint">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//TreeConstraint/type"/>

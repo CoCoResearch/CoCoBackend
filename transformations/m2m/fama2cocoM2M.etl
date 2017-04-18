@@ -27,6 +27,11 @@ rule FM2FM
 	transform m : FMFaMa!FM
 	to n : FMCoCo!FeatureModel {
 		var coco = FMCoCo!CoCo.all.first();
+		
+		if(coco == null){
+			coco = FMCoCo!CoCo.createInstance();
+		}
+		
 		var fms = FMCoCo!FeatureModel.all();
 		var attributes = m.attributes;
 		var crossTreeConstraints = m.crossTreeConstraints;
