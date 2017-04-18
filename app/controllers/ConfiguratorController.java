@@ -11,7 +11,7 @@ import play.mvc.Result;
 import util.AWSS3;
 import util.Util;
 
-public class GeneratorController extends Controller {
+public class ConfiguratorController extends Controller {
 	
 	public Result generateConfiguratorById(String id){
 		boolean downloaded;

@@ -22,6 +22,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="ctConstraints" upperBound="-1"
         eType="#//CrossTreeConstraint" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isDomain" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Feature">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -33,9 +34,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="featureModel" lowerBound="1"
         eType="#//FeatureModel"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="featureAttributes" upperBound="-1"
-        eType="#//FeatureAttribute"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mandatory" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        eType="#//FeatureAttribute" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TreeConstraint">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
@@ -44,27 +43,24 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="setTCTypes" value="(self.type = 'mandatory') or (self.type = 'optional') or &#xA;&#x9;&#x9;(self.type = 'alternative') or (self.type = 'or')"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//TreeConstraintType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="children" lowerBound="1"
         upperBound="-1" eType="#//Feature" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="TreeConstraintType">
+    <eLiterals name="Mandatory"/>
+    <eLiterals name="Optional" value="1"/>
     <eLiterals name="Alternative" value="2"/>
     <eLiterals name="Or" value="3"/>
-    <eLiterals name="And" value="2"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AttributeType">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="independentAttrType" eType="#//AttributeType"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" lowerBound="1"
-        upperBound="-1" eType="#//AttributeTypeElement" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="featureAttributes" upperBound="-1"
-        eType="#//FeatureAttribute" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataType" eType="#//DataType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="DataType">
-    <eLiterals name="string"/>
+    <eLiterals name="String"/>
     <eLiterals name="int" value="1"/>
     <eLiterals name="double" value="2"/>
     <eLiterals name="boolean" value="3"/>
@@ -72,9 +68,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="FeatureAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="attrType" lowerBound="1"
         eType="#//AttributeType"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
-        eType="#//FeatureAttributeElement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="minValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CrossTreeConstraint">
     <eStructuralFeatures xsi:type="ecore:EReference" name="expressions" lowerBound="1"
@@ -91,15 +87,16 @@
         eType="#//FeatureModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="cmConstraints" upperBound="-1"
         eType="#//CrossModelConstraint" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="solutionConstraints" upperBound="-1"
-        eType="#//SolutionConstraint" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="configConstraints" upperBound="-1"
+        eType="#//ConfigurationConstraint" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributeTypes" upperBound="-1"
         eType="#//AttributeType" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="project" upperBound="-1"
         eType="#//Project" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="stakeholders" upperBound="-1"
         eType="#//Stakeholder" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="configScenario" eType="#//ConfigScenarioType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="CMConstraintType">
     <eLiterals name="not"/>
@@ -111,16 +108,18 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="expressions" lowerBound="1"
         upperBound="-1" eType="#//CMConstraintExpression" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SolutionConstraint">
+  <eClassifiers xsi:type="ecore:EClass" name="ConfigurationConstraint">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="setDRTypes"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="setDRTypes" value="(self.type = 'optimization') or (self.type = 'hardLimit') or &#xA;&#x9;&#x9;(self.type = 'selectionState')"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//SCType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SelectionStateSC" eSuperTypes="#//SolutionConstraint">
+  <eClassifiers xsi:type="ecore:EClass" name="SelectionStateCC" eSuperTypes="#//ConfigurationConstraint">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="setSelectionStateDRstates"/>
     </eAnnotations>
@@ -129,51 +128,50 @@
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="featureModel" eType="#//FeatureModel"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="feature" eType="#//Feature"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" eType="#//SelectionStateSCType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="HardLimitSC" eSuperTypes="#//SolutionConstraint">
+  <eClassifiers xsi:type="ecore:EClass" name="HardLimitCC" eSuperTypes="#//ConfigurationConstraint">
     <eStructuralFeatures xsi:type="ecore:EReference" name="expressions" lowerBound="1"
-        upperBound="2" eType="#//HardLimitDRExpression" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="attrType" lowerBound="1"
-        eType="#//AttributeType"/>
+        upperBound="2" eType="#//HardLimitCCExpression" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="function" lowerBound="1"
+        eType="#//AggregationFunction"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="SCType">
+  <eClassifiers xsi:type="ecore:EEnum" name="CCType">
     <eLiterals name="selectionState"/>
     <eLiterals name="hardLimit" value="1"/>
     <eLiterals name="optimization" value="2"/>
-    <eLiterals name="finiteDomain" value="3"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="SelectionStateSCType">
+  <eClassifiers xsi:type="ecore:EEnum" name="CCSelectionStateType">
     <eLiterals name="mandatory"/>
     <eLiterals name="preferred" value="1"/>
     <eLiterals name="forbidden" value="2"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="HardLimitDRExpression">
+  <eClassifiers xsi:type="ecore:EClass" name="HardLimitCCExpression">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="setHardLimitDRop"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="setHardLimitDRop" value="(self.op = 'geq') or (self.op = 'gt') or (self.op = 'leq')&#xA;&#x9;&#x9;or (self.op = 'lt') or (self.op = 'eq')"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="op" eType="#//HardLimitSCOp"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="op" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="OptimizationSC" eSuperTypes="#//SolutionConstraint">
+  <eClassifiers xsi:type="ecore:EClass" name="OptimizationCC" eSuperTypes="#//ConfigurationConstraint">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="setSOptimizationDRfuncts"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="setSOptimizationDRfuncts" value="(self.funct = 'maximize') or (self.funct = 'minimize')"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="funct" eType="#//OptimizationSCFunct"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="attrType" lowerBound="1"
-        eType="#//AttributeType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="funct" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="funtion" lowerBound="1"
+        eType="#//AggregationFunction"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="OptimizationSCFunct">
+  <eClassifiers xsi:type="ecore:EEnum" name="CCOptimizationOp">
     <eLiterals name="maximize"/>
     <eLiterals name="minimize" value="1"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="HardLimitSCOp">
+  <eClassifiers xsi:type="ecore:EEnum" name="CCHardLimitOp">
     <eLiterals name="leq"/>
     <eLiterals name="lt" value="1"/>
     <eLiterals name="geq" value="2"/>
@@ -187,8 +185,8 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="oneTargetProject" value="Project.allInstances() -> exists(x|x.target = true)"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="solutionConstraints" upperBound="-1"
-        eType="#//SolutionConstraint"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="configConstraints" upperBound="-1"
+        eType="#//ConfigurationConstraint"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="configs" upperBound="-1"
         eType="#//Config" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -204,26 +202,13 @@
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="stakeholder" eType="#//Stakeholder"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="selected" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ConfigType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="features" upperBound="-1"
         eType="#//Feature"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Stakeholder">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="job" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AttributeTypeElement">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="setATdataTypes"/>
-    </eAnnotations>
-    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="setATdataTypes" value="(self.dataType = 'String') or (self.dataType = 'int') &#xA;&#x9;&#x9;or (self.dataType = 'double') or (self.dataType = 'boolean')"/>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataType" eType="#//DataType"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FeatureAttributeElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CTConstraintExpression">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
@@ -232,7 +217,7 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="setCTops" value="(self.op = 'not') or (self.op = 'or') or (self.op = 'and')&#xA;&#x9;&#x9;or (self.op = 'implies')"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="op" eType="#//CTConstraintType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="op" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="features" upperBound="-1"
         eType="#//Feature"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="expressions" upperBound="-1"
@@ -245,7 +230,7 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="setCMops" value="(self.op = 'not') or (self.op = 'or') or (self.op = 'and')&#xA;&#x9;&#x9;or (self.op = 'implies')"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="op" eType="#//CMConstraintType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="op" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="features" upperBound="-1"
         eType="#//Feature"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="expressions" upperBound="-1"
@@ -255,23 +240,18 @@
     <eLiterals name="input"/>
     <eLiterals name="output" value="1"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="ConfigScenarioType">
-    <eLiterals name="fmSearch"/>
-    <eLiterals name="fmPreferences" value="1"/>
-    <eLiterals name="fmConflicts" value="2"/>
-    <eLiterals name="fsgSearch" value="3"/>
-    <eLiterals name="fsgPreferences" value="4"/>
-    <eLiterals name="fsgConflicts" value="5"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AggregationFunction">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" eType="#//AggregationOp"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attrType" lowerBound="1"
+        eType="#//AttributeType"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FiniteDomainSC" eSuperTypes="#//SolutionConstraint">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="featureAttributes" lowerBound="1"
-        eType="#//FeatureAttribute"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="feature" lowerBound="1"
-        eType="#//Feature"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="values" lowerBound="1"
-        upperBound="-1" eType="#//FiniteDomainSCValue"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FiniteDomainSCValue">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="AggregationOp">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="AgregationOp"/>
+    </eAnnotations>
+    <eLiterals name="add"/>
+    <eLiterals name="multiply" value="1"/>
+    <eLiterals name="min" value="2"/>
+    <eLiterals name="max" value="3"/>
   </eClassifiers>
 </ecore:EPackage>

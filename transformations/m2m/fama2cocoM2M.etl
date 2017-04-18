@@ -143,9 +143,6 @@ operation Any createAttributesPerFeature(feature : FMCoCo!Feature) {
 	
 	for(fa in featureAttributes){
 		var newFeatureAttribute = new FMCoCo!FeatureAttribute();
-		var newFeatureAttrElement1 = new FMCoCo!FeatureAttributeElement();
-		var newFeatureAttrElement2 = new FMCoCo!FeatureAttributeElement();
-		var newFeatureAttrElement3 = new FMCoCo!FeatureAttributeElement();
 			
 		var attributeType = fa.attributeType;
 		var cocoAttributeType = FMCoCo!AttributeType.all.select(x|x.name == attributeType).first();
@@ -153,40 +150,21 @@ operation Any createAttributesPerFeature(feature : FMCoCo!Feature) {
 		if(cocoAttributeType == null) {
 			var coco = FMCoCo!CoCo.all.first();
 			var newAttributeType = new FMCoCo!AttributeType();
-			var newAttrTypeElement1 = new FMCoCo!AttributeTypeElement();
-			var newAttrTypeElement2 = new FMCoCo!AttributeTypeElement();
-			var newAttrTypeElement3 = new FMCoCo!AttributeTypeElement();
-			
-			newAttrTypeElement1.name = "minValue";
-			newAttrTypeElement1.dataType = FMCoCo!DataType#int;
-			
-			newAttrTypeElement2.name = "maxValue";
-			newAttrTypeElement2.dataType = FMCoCo!DataType#int;
-			
-			newAttrTypeElement3.name = "defaultValue";
-			newAttrTypeElement3.dataType = FMCoCo!DataType#int;
 			
 			newAttributeType.id = attributeType;
 			newAttributeType.name = attributeType;
-			newAttributeType.elements.add(newAttrTypeElement1);
-			newAttributeType.elements.add(newAttrTypeElement2);
-			newAttributeType.elements.add(newAttrTypeElement3);
+			//TODO: verify attribute data type
+			newAttributeType.dataType = FMCoCo!DataType#int;
 			
 			coco.attributeTypes.add(newAttributeType);
 			cocoAttributeType = newAttributeType;
 		}
 		
-		newFeatureAttrElement1.value = "" + fa.minValue;
-		newFeatureAttrElement2.value = "" + fa.maxValue;
-		newFeatureAttrElement3.value = "" + fa.defaultValue;
-		
-		newFeatureAttribute.name = feature.name + "-" + attributeType;
+		newFeatureAttribute.minValue = "" + fa.minValue;
+		newFeatureAttribute.maxValue = "" + fa.maxValue;
+		newFeatureAttribute.defaultValue = "" + fa.defaultValue;
 		newFeatureAttribute.attrType = cocoAttributeType;
-		newFeatureAttribute.elements.add(newFeatureAttrElement1);
-		newFeatureAttribute.elements.add(newFeatureAttrElement2);
-		newFeatureAttribute.elements.add(newFeatureAttrElement3);
 		
-		cocoAttributeType.featureAttributes.add(newFeatureAttribute);
 		feature.featureAttributes.add(newFeatureAttribute);
 	}
 }

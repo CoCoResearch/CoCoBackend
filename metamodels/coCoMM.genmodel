@@ -6,12 +6,13 @@
   <foreignModel>coCoMM.ecore</foreignModel>
   <genPackages prefix="CoCoMM" disposableProviderFactory="true" ecorePackage="coCoMM.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="coCoMM.ecore#//TreeConstraintType">
+      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//TreeConstraintType/Mandatory"/>
+      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//TreeConstraintType/Optional"/>
       <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//TreeConstraintType/Alternative"/>
       <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//TreeConstraintType/Or"/>
-      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//TreeConstraintType/And"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="coCoMM.ecore#//DataType">
-      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//DataType/string"/>
+      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//DataType/String"/>
       <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//DataType/int"/>
       <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//DataType/double"/>
       <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//DataType/boolean"/>
@@ -28,45 +29,43 @@
       <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//CMConstraintType/or"/>
       <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//CMConstraintType/implies"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="coCoMM.ecore#//SCType">
-      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//SCType/selectionState"/>
-      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//SCType/hardLimit"/>
-      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//SCType/optimization"/>
-      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//SCType/finiteDomain"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="coCoMM.ecore#//CCType">
+      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//CCType/selectionState"/>
+      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//CCType/hardLimit"/>
+      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//CCType/optimization"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="coCoMM.ecore#//SelectionStateSCType">
-      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//SelectionStateSCType/mandatory"/>
-      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//SelectionStateSCType/preferred"/>
-      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//SelectionStateSCType/forbidden"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="coCoMM.ecore#//CCSelectionStateType">
+      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//CCSelectionStateType/mandatory"/>
+      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//CCSelectionStateType/preferred"/>
+      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//CCSelectionStateType/forbidden"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="coCoMM.ecore#//OptimizationSCFunct">
-      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//OptimizationSCFunct/maximize"/>
-      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//OptimizationSCFunct/minimize"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="coCoMM.ecore#//CCOptimizationOp">
+      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//CCOptimizationOp/maximize"/>
+      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//CCOptimizationOp/minimize"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="coCoMM.ecore#//HardLimitSCOp">
-      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//HardLimitSCOp/leq"/>
-      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//HardLimitSCOp/lt"/>
-      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//HardLimitSCOp/geq"/>
-      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//HardLimitSCOp/gt"/>
-      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//HardLimitSCOp/eq"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="coCoMM.ecore#//CCHardLimitOp">
+      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//CCHardLimitOp/leq"/>
+      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//CCHardLimitOp/lt"/>
+      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//CCHardLimitOp/geq"/>
+      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//CCHardLimitOp/gt"/>
+      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//CCHardLimitOp/eq"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="coCoMM.ecore#//ConfigType">
       <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//ConfigType/input"/>
       <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//ConfigType/output"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="coCoMM.ecore#//ConfigScenarioType">
-      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//ConfigScenarioType/fmSearch"/>
-      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//ConfigScenarioType/fmPreferences"/>
-      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//ConfigScenarioType/fmConflicts"/>
-      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//ConfigScenarioType/fsgSearch"/>
-      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//ConfigScenarioType/fsgPreferences"/>
-      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//ConfigScenarioType/fsgConflicts"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="coCoMM.ecore#//AggregationOp">
+      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//AggregationOp/add"/>
+      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//AggregationOp/multiply"/>
+      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//AggregationOp/min"/>
+      <genEnumLiterals ecoreEnumLiteral="coCoMM.ecore#//AggregationOp/max"/>
     </genEnums>
     <genClasses ecoreClass="coCoMM.ecore#//FeatureModel">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//FeatureModel/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference coCoMM.ecore#//FeatureModel/root"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference coCoMM.ecore#//FeatureModel/ctConstraints"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//FeatureModel/isDomain"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//FeatureModel/id"/>
     </genClasses>
     <genClasses ecoreClass="coCoMM.ecore#//Feature">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//Feature/id"/>
@@ -74,9 +73,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//Feature/abstract"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference coCoMM.ecore#//Feature/treeConstraints"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference coCoMM.ecore#//Feature/featureModel"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference coCoMM.ecore#//Feature/featureAttributes"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//Feature/mandatory"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference coCoMM.ecore#//AttributeType/featureAttributes"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference coCoMM.ecore#//Feature/featureAttributes"/>
     </genClasses>
     <genClasses ecoreClass="coCoMM.ecore#//TreeConstraint">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//TreeConstraint/type"/>
@@ -85,14 +82,13 @@
     <genClasses ecoreClass="coCoMM.ecore#//AttributeType">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//AttributeType/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//AttributeType/name"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference coCoMM.ecore#//AttributeType/independentAttrType"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference coCoMM.ecore#//AttributeType/elements"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference coCoMM.ecore#//AttributeType/featureAttributes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//AttributeType/dataType"/>
     </genClasses>
     <genClasses ecoreClass="coCoMM.ecore#//FeatureAttribute">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference coCoMM.ecore#//FeatureAttribute/attrType"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//FeatureAttribute/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference coCoMM.ecore#//FeatureAttribute/elements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//FeatureAttribute/defaultValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//FeatureAttribute/minValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//FeatureAttribute/maxValue"/>
     </genClasses>
     <genClasses ecoreClass="coCoMM.ecore#//CrossTreeConstraint">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference coCoMM.ecore#//CrossTreeConstraint/expressions"/>
@@ -100,38 +96,41 @@
     <genClasses ecoreClass="coCoMM.ecore#//CoCo">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference coCoMM.ecore#//CoCo/featureModels"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference coCoMM.ecore#//CoCo/cmConstraints"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference coCoMM.ecore#//CoCo/solutionConstraints"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference coCoMM.ecore#//CoCo/configConstraints"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference coCoMM.ecore#//CoCo/attributeTypes"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference coCoMM.ecore#//CoCo/project"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference coCoMM.ecore#//CoCo/stakeholders"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//CoCo/configScenario"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//CoCo/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//CoCo/name"/>
     </genClasses>
     <genClasses ecoreClass="coCoMM.ecore#//CrossModelConstraint">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference coCoMM.ecore#//CrossModelConstraint/expressions"/>
     </genClasses>
-    <genClasses ecoreClass="coCoMM.ecore#//SolutionConstraint">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//SolutionConstraint/type"/>
+    <genClasses ecoreClass="coCoMM.ecore#//ConfigurationConstraint">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//ConfigurationConstraint/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//ConfigurationConstraint/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//ConfigurationConstraint/name"/>
     </genClasses>
-    <genClasses ecoreClass="coCoMM.ecore#//SelectionStateSC">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference coCoMM.ecore#//SelectionStateSC/featureModel"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference coCoMM.ecore#//SelectionStateSC/feature"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//SelectionStateSC/state"/>
+    <genClasses ecoreClass="coCoMM.ecore#//SelectionStateCC">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference coCoMM.ecore#//SelectionStateCC/featureModel"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference coCoMM.ecore#//SelectionStateCC/feature"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//SelectionStateCC/state"/>
     </genClasses>
-    <genClasses ecoreClass="coCoMM.ecore#//HardLimitSC">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference coCoMM.ecore#//HardLimitSC/expressions"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference coCoMM.ecore#//HardLimitSC/attrType"/>
+    <genClasses ecoreClass="coCoMM.ecore#//HardLimitCC">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference coCoMM.ecore#//HardLimitCC/expressions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference coCoMM.ecore#//HardLimitCC/function"/>
     </genClasses>
-    <genClasses ecoreClass="coCoMM.ecore#//HardLimitDRExpression">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//HardLimitDRExpression/op"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//HardLimitDRExpression/value"/>
+    <genClasses ecoreClass="coCoMM.ecore#//HardLimitCCExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//HardLimitCCExpression/op"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//HardLimitCCExpression/value"/>
     </genClasses>
-    <genClasses ecoreClass="coCoMM.ecore#//OptimizationSC">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//OptimizationSC/funct"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference coCoMM.ecore#//OptimizationSC/attrType"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//SolutionConstraint/type"/>
+    <genClasses ecoreClass="coCoMM.ecore#//OptimizationCC">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//OptimizationCC/funct"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference coCoMM.ecore#//OptimizationCC/funtion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//ConfigurationConstraint/type"/>
     </genClasses>
     <genClasses ecoreClass="coCoMM.ecore#//Project">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference coCoMM.ecore#//Project/solutionConstraints"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference coCoMM.ecore#//Project/configConstraints"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference coCoMM.ecore#//Project/configs"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//Project/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//Project/date"/>
@@ -147,13 +146,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//Stakeholder/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//Stakeholder/job"/>
     </genClasses>
-    <genClasses ecoreClass="coCoMM.ecore#//AttributeTypeElement">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//AttributeTypeElement/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//AttributeTypeElement/dataType"/>
-    </genClasses>
-    <genClasses ecoreClass="coCoMM.ecore#//FeatureAttributeElement">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//FeatureAttributeElement/value"/>
-    </genClasses>
     <genClasses ecoreClass="coCoMM.ecore#//CTConstraintExpression">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//CTConstraintExpression/op"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference coCoMM.ecore#//CTConstraintExpression/features"/>
@@ -164,13 +156,9 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference coCoMM.ecore#//CMConstraintExpression/features"/>
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference coCoMM.ecore#//CMConstraintExpression/expressions"/>
     </genClasses>
-    <genClasses ecoreClass="coCoMM.ecore#//FiniteDomainSC">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference coCoMM.ecore#//FiniteDomainSC/featureAttributes"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference coCoMM.ecore#//FiniteDomainSC/feature"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference coCoMM.ecore#//FiniteDomainSC/values"/>
-    </genClasses>
-    <genClasses ecoreClass="coCoMM.ecore#//FiniteDomainSCValue">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//FiniteDomainSCValue/value"/>
+    <genClasses ecoreClass="coCoMM.ecore#//AggregationFunction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coCoMM.ecore#//AggregationFunction/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference coCoMM.ecore#//AggregationFunction/attrType"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
