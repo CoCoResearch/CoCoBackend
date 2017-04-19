@@ -18,7 +18,7 @@ GET		/featureSolutionGraphs						controllers.FeatureSolutionGraphController.getF
 GET		/featureSolutionGraphs/:id					controllers.FeatureSolutionGraphController.getFeatureSolutionGraphById(id)
 
 # Adding a feature model  to a feature solution graph
-GET		/featureSolutionGraphs/:id/featureModels	controllers.FeatureSolutionGraphController.addFeatureModelToFSGById(id)
+POST	/featureSolutionGraphs/:id/featureModels	controllers.FeatureSolutionGraphController.addFeatureModelToFSGById(id)
 
 # Feature models procurement
 GET		/configurator/:id							controllers.ConfiguratorController.generateConfiguratorById(id)

@@ -13,7 +13,7 @@
 		aliases="FMFaMa" 
 		modelFile="../${afm2cocoModel}" 
 		metamodelUri="http://www.coco.edu/afm2coco/Afm2CoCo" 
-		read="true" store="false" />
+		read="true" store="true" />
 
 	<echo>[ant] Registering CoCo model</echo>
 	<epsilon.emf.loadModel 

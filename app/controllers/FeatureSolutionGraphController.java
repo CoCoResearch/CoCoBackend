@@ -56,9 +56,8 @@ public class FeatureSolutionGraphController extends Controller {
 				Util.waitUntilFileIsCreated(famaFile);
 				
 				IModifier modifier = new AddFaMaFMModifier();
-				modifier.modifyFSG(xmiPath, famaPath);
-				xmiFile = famaFile;
-				Util.waitUntilFileIsCreated(famaFile);
+				modifier.modifyFSG(xmiPath, famaPath, false);
+				xmiFile = new File(xmiPath);
 				
 				featureSolutionGraph.extension = "xmi";
 			}
@@ -115,34 +114,36 @@ public class FeatureSolutionGraphController extends Controller {
 	 * @return
 	 */
 	public Result addFeatureModelToFSGById(String id){
-		Form<FeatureModel> form = Form.form(FeatureModel.class).bindFromRequest();
+		long integerId = Integer.parseInt(id);
+		boolean downloaded;
+		
 		MultipartFormData<File> body = request().body().asMultipartFormData();
 		FilePart<File> filePart = body.getFile("file");
 		File file = filePart.getFile();
 		
-		if(form.hasErrors()) {
-			return badRequest(Util.createResponse("Json error.", false));
-		}
+		FeatureModel featureSolutionGraph = FeatureModel.find.byId(integerId);
+		String xmiPath = Util.COCO_MODEL_PATH + featureSolutionGraph.id + Util.COCO_MODEL_EXTENSION;
+		String famaPath = Util.COCO_MODEL_PATH + featureSolutionGraph.id + Util.FAMA_MODEL_EXTENSION;
+		File xmiFile = new File(xmiPath);
+		File famaFile = new File(famaPath);
 		
 		if(file == null) {
 			return badRequest(Util.createResponse("No file error.", false));
 		}
 		
-		long integerId = Integer.parseInt(id);
-		boolean downloaded;
-		FeatureModel featureSolutionGraph = FeatureModel.find.byId(integerId);
-		String xmiPath = Util.COCO_MODEL_PATH + featureSolutionGraph.id + Util.COCO_MODEL_EXTENSION;
-		String famaPath = Util.COCO_MODEL_PATH + featureSolutionGraph.id + Util.AFM2COCO_MODEL_EXTENSION;
-		
 		downloaded = AWSS3.downloadFile(Util.BUCKET_MAIN_COCO, Util.BUCKET_COCO_MODELS + featureSolutionGraph.id + Util.COCO_MODEL_EXTENSION, 
 				xmiPath);
 		
 		if(downloaded) {
+			FileManager manager = new FileManager();
+			manager.copyFile(file, famaFile);
+			Util.waitUntilFileIsCreated(famaFile);
+			
 			IModifier modifier = new AddFaMaFMModifier();
-			modifier.modifyFSG(xmiPath, famaPath);
+			modifier.modifyFSG(xmiPath, famaPath, true);
 			
-			boolean uploaded = AWSS3.uploadFile(Util.BUCKET_MAIN_COCO, Util.BUCKET_COCO_MODELS + featureSolutionGraph.id + "." + featureSolutionGraph.extension, file);
-			
+			boolean uploaded = AWSS3.uploadFile(Util.BUCKET_MAIN_COCO, Util.BUCKET_COCO_MODELS + featureSolutionGraph.id + Util.COCO_MODEL_EXTENSION, xmiFile);
+
 			if(uploaded) {
 				JsonNode json = Json.toJson(featureSolutionGraph);
 				return created(Util.createResponse(json, true));
